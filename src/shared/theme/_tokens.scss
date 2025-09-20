@@ -1,0 +1,122 @@
+// COLOR
+$color-primary: #ff4646;
+$color-primary-variant-10: #ff46461a;
+$color-on-primary: #ffffff;
+
+$color-background: #ffffff;
+$color-foreground: #181c29;
+
+$color-surface-primary: #ecf3f8;
+$color-surface-secondary: #ffffff66;
+$color-surface-tertiary: #ffffff33;
+$color-on-surface-primary: #181c29;
+
+$color-overlay: #181c29cc;
+
+$color-tag-variant-1: #4361ff;
+$color-tag-variant-2: #ff43f7;
+$color-tag-variant-3: #06a44f;
+
+$color-outline: #64748b;
+
+$gradient-brand: linear-gradient(120deg, #7c3aed, $color-primary);
+$gradient-warm: linear-gradient(120deg, #fb7185, #fbbf24);
+$gradient-cool: linear-gradient(120deg, #0ea5e9, $color-primary);
+
+// TYPOGRAPHY
+$font-family-sans: 'Montserrat', sans-serif;
+$font-family-cursive: 'Allura', cursive;
+
+$tracking-normal: 0;
+$tracking-wide: 0.05em;
+$tracking-wider: 0.08em;
+$tracking-widest: 0.16em;
+$tracking-super-wide: 0.18em;
+
+$leading-none: 1;
+$leading-snug: 1.3;
+$leading-less: 1.48;
+$leading-normal: 1.5;
+$leading-relaxed: 1.52;
+
+$text-sm: 0.75rem;
+$text-base: 1rem;
+$text-2xl: 1.5rem;
+$text-4xl: 2rem;
+$text-8xl: 5rem;
+
+$font-normal: 400;
+$font-semibold: 600;
+
+$typography-tokens: (
+  h1: (
+    size: $text-4xl,
+    weight: $font-semibold,
+    leading: $leading-normal,
+    tracking: $tracking-super-wide,
+    transform: uppercase,
+  ),
+
+  h2: (
+    size: $text-2xl,
+    weight: $font-semibold,
+    leading: $leading-relaxed,
+    tracking: $tracking-widest,
+    transform: uppercase,
+  ),
+
+  h3: (
+    size: $text-base,
+    weight: $font-semibold,
+    leading: $leading-relaxed,
+    tracking: $tracking-wider,
+    transform: uppercase,
+  ),
+
+  h4: (
+    size: $text-sm,
+    weight: $font-semibold,
+    leading: $leading-snug,
+    tracking: $tracking-wide,
+    transform: uppercase,
+  ),
+
+  action: (
+    size: $text-2xl,
+    weight: $font-semibold,
+    leading: $leading-relaxed,
+    tracking: $tracking-widest,
+    transform: uppercase,
+  ),
+
+  action-sm: (
+    size: $text-sm,
+    weight: $font-semibold,
+    leading: $leading-snug,
+    tracking: $tracking-wide,
+    transform: uppercase,
+  ),
+
+  body: (
+    size: $text-base,
+    weight: $font-normal,
+    leading: $leading-less,
+    tracking: $tracking-normal,
+  ),
+
+  caption: (
+    family: $font-family-cursive,
+    size: $text-2xl,
+    weight: $font-normal,
+    leading: $leading-none,
+    tracking: $tracking-wide,
+  ),
+
+  slider: (
+    size: $text-8xl,
+    weight: $font-semibold,
+    leading: $leading-none,
+    tracking: $tracking-normal,
+    transform: uppercase,
+  ),
+);

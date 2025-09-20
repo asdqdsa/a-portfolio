@@ -1,0 +1,28 @@
+@use 'sass:map';
+@use './tokens' as *;
+@use './mixins' as *;
+
+@each $variant, $props in $typography-tokens {
+  $family: if(
+    map.has-key($props, family),
+    map.get($props, family),
+    $font-family-sans
+  );
+
+  $transform: if(
+    map.has-key($props, transform),
+    map.get($props, transform),
+    none
+  );
+
+  .ty-#{$variant} {
+    @include text-base(
+      $family,
+      map.get($props, size),
+      map.get($props, weight),
+      map.get($props, leading),
+      map.get($props, tracking),
+      $transform
+    );
+  }
+}
