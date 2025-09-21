@@ -1,3 +1,10 @@
-.Button {
-  display: flex;
+@use '@/shared/theme/mixins' as *;
+@use '@/shared/theme/tokens' as *;
+@use '@/shared/uikit/mixins' as *;
+
+.button {
+  @include button(#fff, #222);
+  @include flex();
+  justify-content: center;
+  align-items: center;
 }

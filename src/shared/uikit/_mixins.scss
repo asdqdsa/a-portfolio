@@ -1,0 +1,21 @@
+@use '@/shared/theme/tokens' as *;
+
+@mixin button(
+  $color: $color-primary,
+  $main: $color-surface-primary,
+  $hover-color: $color-foreground,
+  $hover: $color-primary-variant-10
+) {
+  color: $color;
+  background: $main;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding-inline: 20px;
+  block-size: 60px;
+  min-inline-size: 200px;
+
+  &:hover {
+    background-color: $hover;
+    color: $hover-color;
+  }
+}
