@@ -9,11 +9,20 @@
   gap: $gap;
 }
 
-@mixin text-base($family, $size, $weight, $leading, $tracking, $transform) {
+@mixin text-base(
+  $family,
+  $size,
+  $weight,
+  $leading,
+  $tracking,
+  $transform,
+  $italic
+) {
   font-family: $family;
   font-size: $size;
   font-weight: $weight;
   line-height: $leading;
   letter-spacing: $tracking;
   text-transform: $transform;
+  font-style: $italic;
 }

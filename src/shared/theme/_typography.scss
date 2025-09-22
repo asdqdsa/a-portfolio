@@ -6,13 +6,19 @@
   $family: if(
     map.has-key($props, family),
     map.get($props, family),
-    $font-family-sans
+    $font-family-secondary
   );
 
   $transform: if(
     map.has-key($props, transform),
     map.get($props, transform),
     none
+  );
+
+  $italic: if(
+    map.has-key($props, italic),
+    map.get($props, italic),
+    $not-italic
   );
 
   .ty-#{$variant} {
@@ -22,7 +28,8 @@
       map.get($props, weight),
       map.get($props, leading),
       map.get($props, tracking),
-      $transform
+      $transform,
+      $italic
     );
   }
 }
