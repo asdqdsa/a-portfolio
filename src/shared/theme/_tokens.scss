@@ -1,29 +1,33 @@
-// COLOR
-$color-primary: #ff4646;
-$color-primary-variant-10: #ff46461a;
-$color-on-primary: #ffffff;
+$color-primary: #ff3c3c;
+$color-on-primary: #222;
 
-$color-background: #ffffff;
-$color-foreground: #181c29;
+$color-bg-primary: #222;
+$color-fg-primary: #fff;
 
-$color-surface-primary: #ecf3f8;
-$color-surface-secondary: #ffffff66;
-$color-surface-tertiary: #ffffff33;
-$color-on-surface-primary: #181c29;
+$color-bg-secondary: #fff;
+$color-fg-secondary: #222;
 
-$color-overlay: #181c29cc;
+$color-overlay: #757575;
+$color-outline: #1e1e1e;
+$color-outline-hover: #ff3c3c;
 
-$color-tag-variant-1: #4361ff;
-$color-tag-variant-2: #ff43f7;
-$color-tag-variant-3: #06a44f;
+$gradient-brand: linear-gradient(
+  135deg,
+  #0ea5e9,
+  #6366f1,
+  #a855f7,
+  #f472b6,
+  #fbbf24
+);
 
-$color-outline: #64748b;
+$selection-bg: #ffffff66;
+$selection-fg: #fff;
 
-$gradient-brand: linear-gradient(120deg, #7c3aed, $color-primary);
-$gradient-warm: linear-gradient(120deg, #fb7185, #fbbf24);
-$gradient-cool: linear-gradient(120deg, #0ea5e9, $color-primary);
+$color-sf-primary: #ecf3f8;
+$color-sf-secondary: #ffffff66;
+$color-sf-tertiary: #ffffff33;
+$color-on-sf-primary: #181c29;
 
-// TYPOGRAPHY
 $font-family-primary: 'Mulish', sans-serif;
 $font-family-secondary: 'Oswald', sans-serif;
 

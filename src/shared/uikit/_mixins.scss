@@ -1,21 +1,53 @@
-@use '@/shared/theme/tokens' as *;
+@use '@/shared/theme/main' as *;
+@use './tokens' as *;
+@use './utility' as *;
 
 @mixin button(
-  $color: $color-primary,
-  $main: $color-surface-primary,
-  $hover-color: $color-foreground,
-  $hover: $color-primary-variant-10
+  $inline: $button-width,
+  $block: $button-height,
+  $bg: $color-bg-primary,
+  $fg: $color-fg-primary,
+  $bg-hover: $color-primary,
+  $fg-hover: $color-on-primary
 ) {
-  color: $color;
-  background: $main;
+  border: none;
+  line-height: $block;
+  text-align: center;
+  color: $fg;
+  background: $bg;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  padding-inline: 20px;
-  block-size: 60px;
-  min-inline-size: 200px;
+  transition: background-color 0.2s ease;
+  padding-inline: rx(10);
+  inline-size: $inline;
+  block-size: $block;
+  min-inline-size: rx(200);
+  border-radius: rx(2);
 
   &:hover {
-    background-color: $hover;
-    color: $hover-color;
+    background-color: $bg-hover;
+    color: $fg-hover;
   }
+}
+
+@mixin container(
+  $max-container-width,
+  $top: $defaultPadding,
+  $bot: $defaultPadding
+) {
+  inline-size: 100%;
+  max-inline-size: $max-container-width;
+  padding: $top $defaultPadding $bot;
+  margin: 0 auto;
+}
+
+@mixin flex($gap: 0, $direction: column) {
+  display: flex;
+  flex-direction: $direction;
+  gap: rx($gap);
+}
+
+@mixin grid($min, $gap) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($min, 1fr));
+  gap: $gap;
 }

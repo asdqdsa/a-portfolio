@@ -1,16 +1,15 @@
 @use '@/shared/theme/main' as *;
-@use '@/shared/uikit/blocks' as *;
+@use '@/shared/uikit/main' as *;
 
 html {
   height: 100%;
   width: 100%;
-  min-width: 1080px;
 }
 
 body {
-  background-color: $color-background;
+  background-color: $color-bg-primary;
   background-image: $gradient-brand;
-  color: $color-foreground;
+  color: $color-fg-primary;
 }
 
 #app {
@@ -18,4 +17,17 @@ body {
   justify-content: center;
   align-items: center;
   font-family: $font-family-primary;
+}
+
+* {
+  @include selection($selection-bg, $selection-fg);
+}
+
+.container {
+  @include container(1440px);
+}
+
+.flex {
+  @include flex(2);
+  align-items: center;
 }

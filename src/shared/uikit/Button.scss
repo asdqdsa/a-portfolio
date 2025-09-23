@@ -1,10 +1,15 @@
-@use '@/shared/theme/mixins' as *;
-@use '@/shared/theme/tokens' as *;
-@use '@/shared/uikit/mixins' as *;
+@use '@/shared/theme/main' as *;
+@use './tokens' as *;
+@use './mixins' as *;
 
-.button {
-  @include button(#fff, #222);
-  @include flex();
-  justify-content: center;
-  align-items: center;
+.btn {
+  @include button;
+}
+
+.btn-md {
+  @include button($button-width-md);
+}
+
+.btn-lg {
+  @include button($button-width-lg);
 }
