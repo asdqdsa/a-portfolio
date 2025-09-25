@@ -1,0 +1,22 @@
+@use '@/shared/theme' as *;
+@use './lib' as *;
+
+.input {
+  max-inline-size: rx(380);
+  block-size: rx(60);
+  border: solid rx(1) $color-outline;
+  padding: rx(18) rx(12);
+  outline: none;
+
+  &:focus {
+    border-color: $color-outline;
+  }
+
+  &:hover {
+    border-color: $color-outline-hover;
+  }
+
+  &::placeholder {
+    color: $color-placeholder;
+  }
+}

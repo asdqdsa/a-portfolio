@@ -1,0 +1,11 @@
+@use '@/shared/theme' as *;
+@use './lib' as *;
+
+.card {
+  border: solid 1px $color-border-primary;
+  padding: rx(24);
+
+  &:hover {
+    border-color: $color-border-hover-primary;
+  }
+}

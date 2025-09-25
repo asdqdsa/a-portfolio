@@ -1,0 +1,14 @@
+@use '@/shared/theme' as *;
+@use './lib' as *;
+
+.scroll-down {
+  @include flex(8, row);
+  padding: rx(10);
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
