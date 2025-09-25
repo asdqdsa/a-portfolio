@@ -1,4 +1,4 @@
-@use './utility' as *;
+@use './utils' as *;
 
 $button-height: rx(60);
 $button-width: 100%;
@@ -7,4 +7,4 @@ $button-width-lg: rx(272);
 
 $defaultPadding: rx(16);
 
-$defaultPageWidth: 1440;
+$defaultPageWidth: rx(1440);

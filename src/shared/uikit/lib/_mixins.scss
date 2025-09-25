@@ -1,6 +1,6 @@
-@use '@/shared/theme/main' as *;
+@use '@/shared/theme' as *;
 @use './tokens' as *;
-@use './utility' as *;
+@use './utils' as *;
 
 @mixin button(
   $inline: $button-width,
@@ -16,7 +16,7 @@
   color: $fg;
   background: $bg;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.3s ease;
   padding-inline: rx(10);
   inline-size: $inline;
   block-size: $block;
@@ -36,7 +36,7 @@
   padding: rx($py) rx($px);
   border: none;
   border-radius: 0;
-  transition: background-color 0.2s ease;
+  transition: color 0.2s ease;
   color: $fg;
 
   &:hover {
@@ -52,7 +52,7 @@
   padding: 0;
 }
 
-@mixin container(
+@mixin page-container(
   $max-container-width: $defaultPageWidth,
   $top: $defaultPadding,
   $bot: $defaultPadding
@@ -60,6 +60,13 @@
   inline-size: 100%;
   max-inline-size: rx($max-container-width);
   padding: $top $bot;
+  margin: 0 auto;
+}
+
+@mixin container($max-container-width: 100%, $top: 0, $bot: 0) {
+  inline-size: 100%;
+  max-inline-size: rx($max-container-width);
+  padding: rx($top) rx($bot);
   margin: 0 auto;
 }
 

@@ -1,6 +1,5 @@
-@use '@/shared/theme/main' as *;
-@use './tokens' as *;
-@use './mixins' as *;
+@use '@/shared/theme' as *;
+@use './lib' as *;
 
 .nav {
   /* @include container($max-container-width: auto); */

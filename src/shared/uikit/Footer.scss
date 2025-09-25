@@ -1,7 +1,5 @@
-@use '@/shared/theme/main' as *;
-@use './tokens' as *;
-@use './mixins' as *;
-@use './utility' as *;
+@use '@/shared/theme' as *;
+@use './lib' as *;
 
 .footer {
   background-color: $color-bg-primary;

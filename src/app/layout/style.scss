@@ -1,8 +1,8 @@
-@use '@/shared/theme/main' as *;
-@use '@/shared/uikit/main' as *;
+@use '@/shared/theme' as *;
+@use '@/shared/uikit' as *;
 @use '@/pages/style';
 
-* {
+*:not(input) {
   @include selection($selection-bg, $selection-fg);
 }
 

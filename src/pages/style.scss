@@ -1,5 +1,5 @@
-@use '@/shared/theme/main' as *;
-@use '@/shared/uikit/main' as *;
+@use '@/shared/theme' as *;
+@use '@/shared/uikit' as *;
 
 .home {
   /* @include flex(); */
@@ -9,8 +9,8 @@
   height: 100%;
 }
 
-.container {
-  @include container(1440);
+.page-container {
+  @include page-container($max-container-width: 1440, $top: 0, $bot: 0);
 }
 
 .flex {
