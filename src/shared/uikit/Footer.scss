@@ -1,0 +1,26 @@
+@use '@/shared/theme/main' as *;
+@use './tokens' as *;
+@use './mixins' as *;
+@use './utility' as *;
+
+.footer {
+  background-color: $color-bg-primary;
+  @include container($top: 0, $bot: 0);
+  @include flex($direction: row);
+  justify-content: center;
+  align-items: center;
+
+  &__logo {
+    padding: rx(20);
+    height: 100%;
+  }
+
+  &__logo-img {
+    display: block;
+    height: 100%;
+  }
+}
+
+.icon {
+  /* @include icon($size: 100%); */
+}

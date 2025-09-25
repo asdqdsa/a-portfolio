@@ -29,14 +29,37 @@
   }
 }
 
+@mixin link($fg: $color-fg-primary, $fg-hover: $color-primary, $px: 0, $py: 0) {
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  padding: rx($py) rx($px);
+  border: none;
+  border-radius: 0;
+  transition: background-color 0.2s ease;
+  color: $fg;
+
+  &:hover {
+    color: $fg-hover;
+  }
+}
+
+@mixin icon($size) {
+  display: inline-block;
+  width: $size;
+  height: $size;
+  font-size: $size;
+  padding: 0;
+}
+
 @mixin container(
-  $max-container-width,
+  $max-container-width: $defaultPageWidth,
   $top: $defaultPadding,
   $bot: $defaultPadding
 ) {
   inline-size: 100%;
-  max-inline-size: $max-container-width;
-  padding: $top $defaultPadding $bot;
+  max-inline-size: rx($max-container-width);
+  padding: $top $bot;
   margin: 0 auto;
 }
 
