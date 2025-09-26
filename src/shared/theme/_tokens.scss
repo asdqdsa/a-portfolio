@@ -1,33 +1,28 @@
-$color-primary: #ff3c3c;
-$color-on-primary: #222;
+@use './colors';
 
-$color-bg-primary: #222;
-$color-fg-primary: #fff;
+$color-primary: var(--color-primary);
+$color-on-primary: var(--color-on-primary);
 
-$color-bg-secondary: #fff;
-$color-fg-secondary: #222;
+$color-bg-primary: var(--color-bg-primary);
+$color-fg-primary: var(--color-fg-primary);
 
-$color-border-primary: #222;
-$color-border-hover-primary: #ff3c3c;
-$color-border-secondary: #fff;
+$color-bg-secondary: var(--color-bg-secondary);
+$color-fg-secondary: var(--color-fg-secondary);
 
-$color-overlay: #757575;
-$color-outline: #1e1e1e;
-$color-outline-hover: #ff3c3c;
+$color-border-primary: var(--color-border-primary);
+$color-border-hover-primary: var(--color-border-hover-primary);
+$color-border-secondary: var(--color-border-secondary);
 
-$color-placeholder: #989898;
+$color-overlay: var(--color-overlay);
+$color-outline: var(--color-outline);
+$color-outline-hover: var(--color-outline-hover);
 
-$gradient-brand: linear-gradient(
-  135deg,
-  #0ea5e9,
-  #6366f1,
-  #a855f7,
-  #f472b6,
-  #fbbf24
-);
+$color-placeholder: var(--color-placeholder);
 
-$selection-bg: #ffffff66;
-$selection-fg: #fff;
+$gradient-brand: var(--gradient-brand);
+
+$selection-bg: var(--selection-bg);
+$selection-fg: var(--selection-fg);
 
 $color-sf-primary: #ecf3f8;
 $color-sf-secondary: #ffffff66;
