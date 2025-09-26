@@ -1,0 +1,47 @@
+@use '../lib/utils' as *;
+@use './mixins' as *;
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+@for $i from 0 to 20 {
+  .gap-#{$i} {
+    gap: rx($i);
+  }
+}
+
+@include generate-spacing-tokens('p', 'padding', 21);
+@include generate-spacing-tokens('m', 'margin', 21);
