@@ -12,7 +12,3 @@
 .page-container {
   @include page-container($max-container-width: 1440, $top: 0, $bot: 0);
 }
-
-.flex {
-  @include flex(2);
-}

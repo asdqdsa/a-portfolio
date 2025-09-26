@@ -63,11 +63,17 @@
   margin: 0 auto;
 }
 
-@mixin container($max-container-width: 100%, $top: 0, $bot: 0) {
+@mixin container(
+  $max-container-width: 100%,
+  $top: 0,
+  $bot: 0,
+  $left: 0,
+  $right: 0
+) {
   inline-size: 100%;
   max-inline-size: rx($max-container-width);
-  padding: rx($top) rx($bot);
-  margin: 0 auto;
+  padding: rx($top) rx($right) rx($bot) rx($left);
+  /* margin: 0 auto; */
 }
 
 @mixin flex($gap: 0, $direction: column) {

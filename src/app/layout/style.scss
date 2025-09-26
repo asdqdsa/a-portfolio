@@ -47,12 +47,9 @@ body {
   background-color: $color-bg-primary;
   background-image: $gradient-brand;
   color: $color-fg-primary;
+  font-family: $font-family-primary;
 }
 
 #app {
-  @include flex;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  font-family: $font-family-primary;
+  /* @include flex; */
 }

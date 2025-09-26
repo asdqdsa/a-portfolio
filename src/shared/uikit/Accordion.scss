@@ -1,0 +1,48 @@
+@use '@/shared/theme' as *;
+@use './lib/mixins' as *;
+@use './lib/utils' as *;
+
+.accordion {
+  @include container($top: 10, $bot: 10, $left: 10, $right: 10);
+  background-color: $color-bg-primary;
+
+  &__item {
+    border-bottom: rx(1) solid $color-fg-primary;
+    padding: rx(18);
+  }
+
+  &__icon {
+    height: rx(24);
+    width: rx(24);
+    fill: $color-fg-secondary;
+    transition: fill 0.2s ease;
+  }
+
+  &__header {
+    @include flex($direction: row);
+    cursor: pointer;
+    justify-content: space-between;
+
+    &:hover {
+      color: $color-primary;
+
+      & .accordion__icon {
+        fill: $color-primary;
+      }
+    }
+  }
+
+  &__content {
+    /* display: none; */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+
+    @include container();
+    /* @include container(); */
+  }
+
+  &__item.active {
+    /* @include container(); */
+  }
+}
