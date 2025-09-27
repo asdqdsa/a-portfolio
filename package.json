@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "prev": "vite preview",
-    "lint": "eslint . && stylelint \"**/*.{css,scss}\"",
+    "lint": "eslint . --ignore-pattern dist && stylelint \"**/*.{css,scss}\"  --ignore-pattern \"dist/**/*\"",
     "format": "prettier --write .",
     "test": "echo OK",
     "prepare": "husky"
