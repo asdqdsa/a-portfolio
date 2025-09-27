@@ -31,6 +31,23 @@ export default defineConfig({
   build: {
     sourcemap: true,
     minify: false,
+    // rollupOptions: {
+    //   input: {
+    //     components: 'src/shared/uikit/bundles/Components.scss',
+    //     theme: 'src/shared/uikit/bundles/Theme.scss',
+    //     atomic: 'src/shared/uikit/bundles/Atomic.scss',
+    //   },
+    // },
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          @use "@/shared/uikit" as *;
+          @use "@/shared/uikit/theme" as *;
+        `,
+      },
+    },
   },
   resolve: {
     alias: {

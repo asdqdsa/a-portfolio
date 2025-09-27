@@ -2,7 +2,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@uikit": ["src/shared/uikit"],
+      "@uikit/*": ["src/shared/uikit/*"]
     },
     "allowJs": true,
     "checkJs": true

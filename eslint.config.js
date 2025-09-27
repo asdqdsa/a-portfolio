@@ -22,7 +22,13 @@ export default defineConfig([
     settings: {
       'import/resolver': {
         alias: {
-          map: [['@', './src']],
+          map: [
+            ['@', './src'],
+            ['@uikit', './src/shared/uikit'],
+            ['@uikit/*', './src/shared/uikit/*'],
+            ['@core', './src/shared/core'],
+            ['@core/*', './src/shared/core/*'],
+          ],
           extensions: ['.js', '.mjs', '.cjs', '.json'],
         },
       },
