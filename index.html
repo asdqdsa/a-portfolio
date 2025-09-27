@@ -7,75 +7,82 @@
     <title>%VITE_TITLE%App</title>
   </head>
 
-  <body class="page-container" data-theme="dark" id="root">
-    <header class="header">
-      <div class="header__logo" id="logo">
-        <img class="header__logo-img icon" src="logo.svg" alt="Logo" />
-      </div>
-      <nav class="nav ty-ui">
+  <body id="root" class="" data-theme="dark">
+    <div class="page">
+      <header class="header">
+        <div class="header__logo" id="logo">
+          <img class="header__logo-img" src="logo.svg" alt="Logo" />
+        </div>
+        <nav class="nav ty-ui">
+          <ul class="list-nav">
+            <li><a class="link" href="#">ABOUT ME</a></li>
+            <li><a class="link" href="#">PORTFOLIO</a></li>
+            <li><a class="link" href="#">PRICE</a></li>
+            <li><a class="link" href="#">FAQ</a></li>
+            <li><a class="link" href="#">CONTACTS</a></li>
+          </ul>
+          <button class="btn-nav">
+            <svg class="" aria-hidden="true">
+              <use href="burger.svg#burger"></use>
+            </svg>
+          </button>
+        </nav>
+      </header>
+      <main
+        id="app"
+        class="flex flex-col flex-1 gap-6 justify-center items-center"
+      >
+        <h1 class="ty-h1">YO</h1>
+        <input class="input ty-ui" placeholder="PLACEHOLDER" />
+        <div class="ty-h4">1</div>
+        <div class="ty-h3">2</div>
+        <div class="ty-h2">3</div>
+        <div class="ty-decor">4</div>
+        <div class="ty-body">HE</div>
+        <div class="ty-body-sm">so smol</div>
+        <div class="ty-body-italic">and italic</div>
+
+        <div class="container flex flex-col gap-2 m-1">
+          <div class="btn-md">Button</div>
+          <div class="btn-lg">Button</div>
+          <div class="btn">Button</div>
+        </div>
+
+        <div class="accordion" id="accordion">
+          <div class="flex flex-col gap-4 accordion__item">
+            <div class="accordion__header ty-h3">
+              <p class="">Header</p>
+              <svg class="accordion__icon" viewBox="0 0 24 24">
+                <use href="/plus.svg#plus"></use>
+              </svg>
+            </div>
+
+            <div class="accordion__content ty-body">
+              <p>lmao</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-4 accordion__item">
+            <div class="accordion__header ty-h3">
+              <p class="">Header</p>
+              <svg class="accordion__icon" viewBox="0 0 24 24">
+                <use href="/plus.svg#plus"></use>
+              </svg>
+            </div>
+            <div class="accordion__content ty-body">lol</div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer ty-ui">
         <ul class="list">
-          <li><a class="link" href="#">ABOUT ME</a></li>
-          <li><a class="link" href="#">PORTFOLIO</a></li>
-          <li><a class="link" href="#">PRICE</a></li>
-          <li><a class="link" href="#">FAQ</a></li>
-          <li><a class="link" href="#">CONTACTS</a></li>
+          <li><a class="link" href="#">INSTAGRAM</a></li>
+          <li><a class="link" href="#">TELEGRAM</a></li>
+          <li><a class="link" href="#">WHATSAPP</a></li>
+          <li><a class="link" href="#">EUROPE</a></li>
+          <li><a class="link" href="#">+1 234 9843572</a></li>
         </ul>
-      </nav>
-    </header>
-    <main
-      id="app"
-      class="flex flex-col flex-1 gap-6 justify-center items-center"
-    >
-      <h1 class="ty-h1">Henlo DASH</h1>
-      <input class="input ty-ui" placeholder="PLACEHOLDER" />
-      <div class="ty-h4">1</div>
-      <div class="ty-h3">2</div>
-      <div class="ty-h2">3</div>
-      <div class="ty-decor">4</div>
-      <div class="ty-body">HE</div>
-      <div class="ty-body-sm">so smol</div>
-      <div class="ty-body-italic">and italic</div>
-
-      <div class="container flex flex-col gap-2 m-98">
-        <div class="btn-md">Button</div>
-        <div class="btn-lg">Button</div>
-        <div class="btn">Button</div>
-      </div>
-
-      <div class="accordion" id="accordion">
-        <div class="flex flex-col gap-4 accordion__item">
-          <div class="accordion__header ty-h3">
-            <p class="">Header</p>
-            <svg class="accordion__icon" viewBox="0 0 24 24">
-              <use href="/plus.svg#plus"></use>
-            </svg>
-          </div>
-
-          <div class="accordion__content ty-body">
-            <p>lmao</p>
-          </div>
-        </div>
-
-        <div class="flex flex-col gap-4 accordion__item">
-          <div class="accordion__header ty-h3">
-            <p class="">Header</p>
-            <svg class="accordion__icon" viewBox="0 0 24 24">
-              <use href="/plus.svg#plus"></use>
-            </svg>
-          </div>
-          <div class="accordion__content ty-body">lol</div>
-        </div>
-      </div>
-    </main>
-    <footer class="footer ty-ui">
-      <ul class="list">
-        <li><a class="link" href="#">INSTAGRAM</a></li>
-        <li><a class="link" href="#">TELEGRAM</a></li>
-        <li><a class="link" href="#">WHATSAPP</a></li>
-        <li><a class="link" href="#">EUROPE</a></li>
-        <li><a class="link" href="#">+1 234 9843572</a></li>
-      </ul>
-    </footer>
+      </footer>
+    </div>
     <script type="module" src="/src/app/main.js"></script>
   </body>
 </html>

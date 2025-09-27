@@ -1,8 +1,12 @@
+@use 'sass:meta';
 @use '@theme' as *;
 @use '@core' as *;
 
 @mixin link($fg: $color-fg-primary, $fg-hover: $color-primary, $px: 0, $py: 0) {
-  padding: rx($py) rx($px);
+  $pad-x: if(meta.type-of($px) == number, rx($px), $px);
+  $pad-y: if(meta.type-of($py) == number, rx($py), $py);
+
+  padding: $pad-y $pad-x;
   border: none;
   border-radius: 0;
   background: transparent;

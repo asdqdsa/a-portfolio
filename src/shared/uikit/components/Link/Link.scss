@@ -1,6 +1,9 @@
+@use '@core' as *;
+@use '@theme' as *;
 @use './mixins' as *;
 
+$cl: clamp(0rem, -0.665rem + 2.128vi, 1.25rem);
 .link {
-  @include link($px: 20, $py: 18);
+  @include link($px: $cl, $py: 20);
   display: block;
 }

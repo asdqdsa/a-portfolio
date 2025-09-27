@@ -6,8 +6,27 @@
   /* display: flex; */
   /* padding: 0; */
   /* margin: 0 auto; */
+
+  /* @include list(); */
+  @include flex(0, row);
 }
 
-.list {
-  @include flex($direction: row);
+.btn-nav {
+  @include selectable($color-primary);
+  display: none;
+  block-size: rx(60);
+  inline-size: rx(60);
+
+  & svg {
+    @include icon(rx(60));
+    color: $color-fg-primary;
+
+    @include hover {
+      color: $color-primary;
+    }
+  }
+
+  @include screen(md) {
+    display: block;
+  }
 }

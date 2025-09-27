@@ -41,7 +41,7 @@ html {
 }
 
 body {
-  @include flex;
+  width: 100%;
   height: 100%;
   background-color: $color-bg-primary;
   background-image: $gradient-brand;
