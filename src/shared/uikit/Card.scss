@@ -2,10 +2,10 @@
 @use './lib' as *;
 
 .card {
-  border: solid 1px $color-border-primary;
+  border: solid rx(1) $color-border-primary;
   padding: rx(24);
 
-  &:hover {
+  @include hover {
     border-color: $color-border-hover-primary;
   }
 }

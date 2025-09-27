@@ -9,7 +9,11 @@ document.querySelectorAll('.accordion__header').forEach((el) => {
 
     if (item.classList.contains('active')) {
       icon.setAttribute('href', '/minus.svg#minus');
-      content.style.maxHeight = content.scrollHeight + 'px';
+
+      content.style.maxHeight =
+        content.scrollHeight === 0
+          ? content.scrollHeight + ''
+          : content.scrollHeight / 16 + 'rem';
     } else {
       icon.setAttribute('href', '/plus.svg#plus');
       content.style.maxHeight = '0';

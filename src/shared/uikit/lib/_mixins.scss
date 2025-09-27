@@ -23,9 +23,19 @@
   min-inline-size: rx(200);
   border-radius: rx(2);
 
-  &:hover {
-    background-color: $bg-hover;
-    color: $fg-hover;
+  @include hover {
+    &:hover {
+      background-color: $bg-hover;
+      color: $fg-hover;
+    }
+  }
+}
+
+@mixin hover() {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
   }
 }
 
@@ -39,7 +49,7 @@
   transition: color 0.2s ease;
   color: $fg;
 
-  &:hover {
+  @include hover {
     color: $fg-hover;
   }
 }
@@ -73,7 +83,6 @@
   inline-size: 100%;
   max-inline-size: rx($max-container-width);
   padding: rx($top) rx($right) rx($bot) rx($left);
-  /* margin: 0 auto; */
 }
 
 @mixin flex($gap: 0, $direction: column) {

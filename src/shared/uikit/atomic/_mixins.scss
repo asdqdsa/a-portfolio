@@ -1,11 +1,13 @@
+@use '../lib/utils' as *;
+
 @mixin generate-spacing-tokens($prefix, $prop, $to) {
   @for $i from 0 to $to {
     .#{$prefix}-#{$i} {
       #{$prop}: rx($i);
     }
 
-    .#{$prefix}-#{$i} {
-      #{$prop}t-top: rx($i);
+    .#{$prefix}t-#{$i} {
+      #{$prop}-top: rx($i);
     }
 
     .#{$prefix}r-#{$i} {

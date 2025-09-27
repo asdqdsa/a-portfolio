@@ -22,27 +22,26 @@
     @include flex($direction: row);
     cursor: pointer;
     justify-content: space-between;
-
-    &:hover {
-      color: $color-primary;
-
-      & .accordion__icon {
-        fill: $color-primary;
-      }
-    }
   }
 
   &__content {
-    /* display: none; */
+    /* @include container; */
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
-
-    @include container();
-    /* @include container(); */
   }
 
   &__item.active {
     /* @include container(); */
+  }
+
+  @include hover {
+    .accordion {
+      &__header {
+        &:hover {
+          color: $color-primary;
+        }
+      }
+    }
   }
 }
