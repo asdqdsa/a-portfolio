@@ -2,10 +2,10 @@
 @use '@core' as *;
 
 .input {
-  max-inline-size: rx(380);
-  block-size: rx(60);
-  border: solid rx(1) $color-outline;
   padding: rx(18) rx(12);
+  border: solid rx(1) $color-outline;
+  block-size: rx(60);
+  max-inline-size: rx(380);
   outline: none;
 
   &:focus {
@@ -13,6 +13,7 @@
   }
 
   @include hover {
+    display: block;
     border-color: $color-outline-hover;
   }
 

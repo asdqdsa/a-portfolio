@@ -9,11 +9,11 @@
 ) {
   font-family: $family;
   font-size: $size;
-  font-weight: $weight;
-  line-height: $leading;
-  letter-spacing: $tracking;
-  text-transform: $transform;
   font-style: $italic;
+  font-weight: $weight;
+  letter-spacing: $tracking;
+  line-height: $leading;
+  text-transform: $transform;
 }
 
 @mixin selection($bg, $fg) {

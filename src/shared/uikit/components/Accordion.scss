@@ -6,27 +6,28 @@
   background-color: $color-bg-primary;
 
   &__item {
-    border-bottom: rx(1) solid $color-fg-primary;
     padding: rx(18);
+    border-bottom: rx(1) solid $color-fg-primary;
   }
 
   &__icon {
-    height: rx(24);
     width: rx(24);
+    height: rx(24);
     fill: $color-fg-secondary;
+    text-align: center;
     transition: fill 0.2s ease;
   }
 
   &__header {
     @include flex($direction: row);
-    cursor: pointer;
     justify-content: space-between;
+    cursor: pointer;
   }
 
   &__content {
+    overflow: hidden;
     /* @include container; */
     max-height: 0;
-    overflow: hidden;
     transition: max-height 0.3s ease;
   }
 

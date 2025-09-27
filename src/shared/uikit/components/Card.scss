@@ -2,8 +2,8 @@
 @use '@core' as *;
 
 .card {
-  border: solid rx(1) $color-border-primary;
   padding: rx(24);
+  border: solid rx(1) $color-border-primary;
 
   @include hover {
     border-color: $color-border-hover-primary;

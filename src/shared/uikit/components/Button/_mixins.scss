@@ -10,17 +10,17 @@
   $fg-hover: $color-on-primary
 ) {
   border: none;
-  line-height: $block;
-  text-align: center;
-  color: $fg;
-  background: $bg;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  padding-inline: rx(10);
-  inline-size: $inline;
-  block-size: $block;
-  min-inline-size: rx(200);
   border-radius: rx(2);
+  background: $bg;
+  block-size: $block;
+  color: $fg;
+  cursor: pointer;
+  inline-size: $inline;
+  line-height: $block;
+  min-inline-size: rx(200);
+  padding-inline: rx(10);
+  text-align: center;
+  transition: background-color 0.3s ease;
 
   @include hover {
     &:hover {

@@ -2,15 +2,15 @@
 @use '@core' as *;
 
 .header {
+  align-items: center;
+  justify-content: space-between;
   background-color: $color-bg-primary;
   @include container($top: 0, $bot: 0);
   @include flex($direction: row);
-  justify-content: space-between;
-  align-items: center;
 
   &__logo {
-    padding: rx(20);
     height: 100%;
+    padding: rx(20);
   }
 
   &__logo-img {

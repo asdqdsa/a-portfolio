@@ -2,14 +2,14 @@
 @use '@core' as *;
 
 @mixin link($fg: $color-fg-primary, $fg-hover: $color-primary, $px: 0, $py: 0) {
-  background: transparent;
-  cursor: pointer;
-  text-decoration: none;
   padding: rx($py) rx($px);
   border: none;
   border-radius: 0;
-  transition: color 0.2s ease;
+  background: transparent;
   color: $fg;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s ease;
 
   @include hover {
     color: $fg-hover;
