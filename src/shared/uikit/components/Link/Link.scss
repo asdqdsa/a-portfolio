@@ -1,5 +1,4 @@
-@use '@/shared/theme' as *;
-@use './lib' as *;
+@use './mixins' as *;
 
 .link {
   @include link($px: 20, $py: 18);

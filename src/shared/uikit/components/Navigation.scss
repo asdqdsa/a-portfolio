@@ -1,5 +1,5 @@
-@use '@/shared/theme' as *;
-@use './lib' as *;
+@use '@theme' as *;
+@use '@core' as *;
 
 .nav {
   /* @include container($max-container-width: auto); */

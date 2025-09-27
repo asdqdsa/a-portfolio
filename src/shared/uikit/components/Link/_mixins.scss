@@ -1,0 +1,17 @@
+@use '@theme' as *;
+@use '@core' as *;
+
+@mixin link($fg: $color-fg-primary, $fg-hover: $color-primary, $px: 0, $py: 0) {
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  padding: rx($py) rx($px);
+  border: none;
+  border-radius: 0;
+  transition: color 0.2s ease;
+  color: $fg;
+
+  @include hover {
+    color: $fg-hover;
+  }
+}

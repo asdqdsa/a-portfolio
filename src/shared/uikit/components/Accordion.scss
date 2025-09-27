@@ -1,6 +1,5 @@
-@use '@/shared/theme' as *;
-@use './lib/mixins' as *;
-@use './lib/utils' as *;
+@use '@theme' as *;
+@use '@core' as *;
 
 .accordion {
   @include container($top: 10, $bot: 10, $left: 10, $right: 10);

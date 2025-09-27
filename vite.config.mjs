@@ -35,6 +35,9 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': resolve(__dirname, _config.srcPath),
+      '@uikit': resolve(__dirname, _config.srcUikit),
+      '@core': resolve(__dirname, _config.srcCore),
+      '@theme': resolve(__dirname, _config.srcTheme),
     },
   },
 });

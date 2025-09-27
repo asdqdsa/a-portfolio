@@ -1,4 +1,4 @@
-@use '../lib/utils' as *;
+@use '@core' as *;
 
 @mixin generate-spacing-tokens($prefix, $prop, $to) {
   @for $i from 0 to $to {

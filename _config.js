@@ -13,6 +13,9 @@ const _config = {
 
   root: './',
   srcPath: 'src',
+  srcUikit: 'src/shared/uikit',
+  srcCore: 'src/shared/uikit/core',
+  srcTheme: 'src/shared/uikit/theme',
 
   legacyTargets: ['defaults', 'not IE 11'],
 };

@@ -1,0 +1,31 @@
+@use '@theme' as *;
+@use '@core' as *;
+
+@mixin button(
+  $inline: $button-width,
+  $block: $button-height,
+  $bg: $color-bg-primary,
+  $fg: $color-fg-primary,
+  $bg-hover: $color-primary,
+  $fg-hover: $color-on-primary
+) {
+  border: none;
+  line-height: $block;
+  text-align: center;
+  color: $fg;
+  background: $bg;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding-inline: rx(10);
+  inline-size: $inline;
+  block-size: $block;
+  min-inline-size: rx(200);
+  border-radius: rx(2);
+
+  @include hover {
+    &:hover {
+      background-color: $bg-hover;
+      color: $fg-hover;
+    }
+  }
+}

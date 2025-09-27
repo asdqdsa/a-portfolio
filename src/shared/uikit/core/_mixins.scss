@@ -1,56 +1,12 @@
-@use '@/shared/theme' as *;
+@use '@theme' as *;
 @use './tokens' as *;
 @use './utils' as *;
-
-@mixin button(
-  $inline: $button-width,
-  $block: $button-height,
-  $bg: $color-bg-primary,
-  $fg: $color-fg-primary,
-  $bg-hover: $color-primary,
-  $fg-hover: $color-on-primary
-) {
-  border: none;
-  line-height: $block;
-  text-align: center;
-  color: $fg;
-  background: $bg;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  padding-inline: rx(10);
-  inline-size: $inline;
-  block-size: $block;
-  min-inline-size: rx(200);
-  border-radius: rx(2);
-
-  @include hover {
-    &:hover {
-      background-color: $bg-hover;
-      color: $fg-hover;
-    }
-  }
-}
 
 @mixin hover() {
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       @content;
     }
-  }
-}
-
-@mixin link($fg: $color-fg-primary, $fg-hover: $color-primary, $px: 0, $py: 0) {
-  background: transparent;
-  cursor: pointer;
-  text-decoration: none;
-  padding: rx($py) rx($px);
-  border: none;
-  border-radius: 0;
-  transition: color 0.2s ease;
-  color: $fg;
-
-  @include hover {
-    color: $fg-hover;
   }
 }
 

@@ -1,5 +1,5 @@
-@use '@/shared/theme' as *;
-@use './lib' as *;
+@use '@theme' as *;
+@use '@core' as *;
 
 .header {
   background-color: $color-bg-primary;

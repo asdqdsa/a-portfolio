@@ -1,5 +1,5 @@
-@use '@/shared/theme' as *;
-@use './lib' as *;
+@use '@theme' as *;
+@use '@core' as *;
 
 .card {
   border: solid rx(1) $color-border-primary;
