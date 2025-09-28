@@ -13,7 +13,7 @@ $breakpoints: (
 @mixin screen($label) {
   $val: map.get($breakpoints, $label);
 
-  @media (width <= $val) {
+  @media screen and (width <= $val) {
     @content;
   }
 }

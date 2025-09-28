@@ -7,7 +7,7 @@
     <title>%VITE_TITLE%App</title>
   </head>
 
-  <body id="root" class="" data-theme="dark">
+  <body id="root" class="body" data-theme="dark">
     <div class="page">
       <header class="header">
         <div class="header__logo" id="logo">
@@ -32,6 +32,24 @@
         id="app"
         class="flex flex-col flex-1 gap-6 justify-center items-center"
       >
+        <section class="hero">
+          <div class="hero__aside">aside</div>
+          <span aria-hidden="true"></span>
+          <div class="hero__main">main</div>
+          <span aria-hidden="true"></span>
+          <div class="hero__gallery">
+            <figure class="hero__gallery-item hero__gallery-lt">
+              <img src="hero-pic-lt.png" alt="Photo 1" />
+            </figure>
+            <figure class="hero__gallery-item hero__gallery-rt">
+              <img src="hero-pic-rt.png" alt="Photo 2" />
+              <figcaption class="ty-body">
+                Hi! I’m Vera, a photographer. For me, photography is more than
+                just an image.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
         <h1 class="ty-h1">YO</h1>
         <input class="input ty-ui" placeholder="PLACEHOLDER" />
         <div class="ty-h4">1</div>

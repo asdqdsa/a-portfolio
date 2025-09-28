@@ -1,17 +1,81 @@
 @use '@uikit' as *;
 @use '@core' as *;
 
-.home {
+/* .home {
   height: 100%;
-  /* @include flex(); */
+  @include flex();
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .page {
   @include page-container($max-container-width: 1440, $top: 0, $bot: 0);
   display: flex;
   height: 100%;
   flex-direction: column;
+}
+
+@mixin section($type: 'default') {
+  min-inline-size: 100%;
+  @if $type == 'hero' {
+    padding: 0 rx(20) 0 0;
+  } @else {
+    padding: rx(60) rx(20);
+  }
+}
+
+.hero {
+  @include section('hero');
+  display: grid;
+  height: 862px;
+  background-color: $color-bg-primary;
+  grid-template-columns: auto rx(20) 1fr rx(40) auto;
+
+  &__aside {
+    grid-column: 1;
+  }
+
+  &__main {
+    grid-column: 3;
+  }
+
+  &__gallery {
+    display: grid;
+    gap: rx(40);
+    grid-column: 5;
+    grid-template-columns: repeat(2, max-content);
+
+    &-item {
+      padding: rx(60) 0;
+    }
+
+    &-lt {
+      align-self: center;
+
+      @include screen('md') {
+        display: none;
+      }
+    }
+
+    &-rt {
+      @include flex;
+      align-items: end;
+      justify-content: space-between;
+
+      @include screen('md') {
+        inline-size: rx(220);
+      }
+    }
+  }
+
+  & figcaption {
+    max-width: rx(220);
+    text-align: right;
+  }
+
+  & img {
+    inline-size: 100%;
+    /* object-fit: cover; */
+  }
 }
