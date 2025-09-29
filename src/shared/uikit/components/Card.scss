@@ -8,6 +8,7 @@
   border: solid rx(1) $color-border-primary;
   block-size: rx(500);
   inline-size: rx(320);
+  transition: border-color 0.3s ease;
 
   &__content {
     @include flex(12);
