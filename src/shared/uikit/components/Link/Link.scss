@@ -4,6 +4,6 @@
 
 $cl: clamp(0rem, -0.665rem + 2.128vi, 1.25rem);
 .link {
-  @include link($px: $cl, $py: 20);
+  @include link($px: $cl, $py: 18);
   display: block;
 }

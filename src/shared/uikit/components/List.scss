@@ -10,7 +10,7 @@
 
 .list-nav {
   @include flex(0, row);
-  @include screen('2xl') {
+  @include screen(md) {
     display: none;
   }
 }

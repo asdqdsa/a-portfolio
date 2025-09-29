@@ -1,0 +1,9 @@
+@use '@theme' as *;
+@use '@core' as *;
+
+.separator {
+  display: block;
+  flex: 1;
+  background-color: $color-fg-primary;
+  block-size: rx(1);
+}
