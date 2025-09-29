@@ -1,0 +1,11 @@
+@use '@core' as *;
+
+.socials {
+  @include flex(0, row);
+  align-items: center;
+  justify-content: center;
+
+  @include screen(lg) {
+    flex-direction: column;
+  }
+}

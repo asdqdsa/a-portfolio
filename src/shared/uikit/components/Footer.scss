@@ -6,9 +6,9 @@
   justify-content: center;
   background-color: $color-bg-primary;
   @include container($top: 0, $bot: 0);
-  @include flex($direction: row);
+  @include flex;
 
-  &__logo {
+  /* &__logo {
     height: 100%;
     padding: rx(20);
   }
@@ -16,9 +16,25 @@
   &__logo-img {
     display: block;
     height: 100%;
-  }
+  } */
 }
 
 .icon {
   /* @include icon($size: 100%); */
+}
+
+.socials__wrapper {
+  @include container($max-container-width: 1440, $left: 20, $right: 20);
+  padding: rx(20);
+  background-color: $color-bg-primary;
+  color: $color-fg-primary;
+  @include selection($selection-bg-secondary, $selection-fg-secondary);
+}
+
+.signup__wrapper {
+  @include container($max-container-width: 1440, $left: 20, $right: 20);
+  padding: rx(40) rx(20) rx(20);
+  background-color: $color-bg-secondary;
+  color: $color-fg-secondary;
+  @include selection($selection-bg-secondary, $selection-fg-secondary);
 }

@@ -1,0 +1,16 @@
+@use '@theme' as *;
+@use '@core' as *;
+
+.signup {
+  @include flex(20);
+  align-items: center;
+
+  &__form {
+    @include flex(8, row);
+
+    @include screen(ml) {
+      flex-direction: column;
+      inline-size: 100%;
+    }
+  }
+}
