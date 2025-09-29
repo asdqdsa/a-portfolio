@@ -2,8 +2,39 @@
 @use '@core' as *;
 
 .card {
+  @include flex;
+  justify-content: space-between;
   padding: rx(24);
   border: solid rx(1) $color-border-primary;
+  block-size: rx(500);
+  inline-size: rx(320);
+
+  &__content {
+    @include flex(12);
+  }
+
+  &-list {
+    @include flex(4);
+  }
+
+  &-list-item {
+    @include flex(0, row);
+    align-items: center;
+  }
+
+  &-list-item::before {
+    display: inline-block;
+    width: rx(6);
+    height: rx(6);
+    margin-right: rx(6);
+    background-color: currentColor;
+    content: '';
+  }
+
+  &__footer {
+    @include flex(12);
+    gap: rx(12);
+  }
 
   @include hover {
     border-color: $color-border-hover-primary;

@@ -84,3 +84,12 @@
   inline-size: 1px;
   white-space: nowrap;
 }
+
+@mixin section($type: 'default') {
+  max-inline-size: 100%;
+  @if $type == 'hero' {
+    padding: 0 rx(20) 0 0;
+  } @else {
+    padding: rx(60) rx(20);
+  }
+}

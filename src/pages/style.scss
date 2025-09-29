@@ -1,7 +1,9 @@
-@use '@uikit' as *;
-@use '@core' as *;
 @forward './Hero';
 @forward './About';
+@forward './Pricing';
+
+@use '@uikit' as *;
+@use '@core' as *;
 
 .page {
   @include page-container($max-container-width: 1440, $top: 0, $bot: 0);
@@ -10,21 +12,20 @@
   flex-direction: column;
 }
 
-@mixin section($type: 'default') {
-  max-inline-size: 100%;
-  @if $type == 'hero' {
-    padding: 0 rx(20) 0 0;
-  } @else {
-    padding: rx(60) rx(20);
-  }
-}
-
 .hero__wrapper {
   display: grid;
   background-color: $color-bg-primary;
 }
 
 .about__wrapper {
+  @include container($max-container-width: 1440, $left: 20, $right: 20);
+  padding: rx(60) rx(20);
+  background-color: $color-bg-secondary;
+  color: $color-fg-secondary;
+  @include selection($selection-bg-secondary, $selection-fg-secondary);
+}
+
+.pricing__wrapper {
   @include container($max-container-width: 1440, $left: 20, $right: 20);
   padding: rx(60) rx(20);
   background-color: $color-bg-secondary;

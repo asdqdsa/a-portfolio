@@ -1,0 +1,19 @@
+@use '@uikit' as *;
+@use '@core' as *;
+
+$pricing-list-gap: clamp(1.25rem, -0.179rem + 2.976vi, 2.5rem);
+
+.pricing {
+  @include flex(40);
+
+  &__header {
+    @include flex(12);
+  }
+
+  &__list {
+    display: grid;
+    justify-content: center;
+    gap: $pricing-list-gap;
+    grid-template-columns: repeat(auto-fit, minmax(rx(320), max-content));
+  }
+}
