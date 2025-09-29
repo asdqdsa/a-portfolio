@@ -33,6 +33,9 @@
   --selection-bg: #ffffff66;
   --selection-fg: #fff;
 
+  --selection-bg-secondary: #ffffff33;
+  --selection-fg-secondary: #222;
+
   --color-sf-primary: #ecf3f8;
   --color-sf-secondary: #ffffff66;
   --color-sf-tertiary: #ffffff33;
@@ -73,6 +76,9 @@
 
   --selection-bg: #ffffff66;
   --selection-fg: #fff;
+
+  --selection-bg-secondary: #ffffff33;
+  --selection-fg-secondary: #222;
 }
 
 [data-theme='gold'] {
@@ -109,4 +115,7 @@
 
   --selection-bg: #ffffff33;
   --selection-fg: #222;
+
+  --selection-bg-secondary: #ffffff33;
+  --selection-fg-secondary: #222;
 }

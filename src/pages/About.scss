@@ -1,0 +1,30 @@
+@use '@theme' as *;
+@use '@uikit' as *;
+@use '@core' as *;
+
+.about {
+  display: grid;
+  gap: rx(40);
+  grid-template-columns: repeat(auto-fit, minmax(rx(300), 1fr));
+  @include screen(md) {
+    grid-template-columns: 1fr;
+  }
+
+  @include screen(sm) {
+    grid-template-columns: repeat(auto-fit, minmax(rx(200), 1fr));
+  }
+
+  &__item {
+    @include flex(40);
+
+    @include screen(md) {
+      &-img-last {
+        display: none;
+      }
+    }
+  }
+
+  &__lede {
+    @include flex(12);
+  }
+}
