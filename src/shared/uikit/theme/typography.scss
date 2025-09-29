@@ -1,6 +1,7 @@
 @use 'sass:map';
 @use './tokens' as *;
 @use './mixins' as *;
+@use '../core/breakpoints' as *;
 
 @each $variant, $props in $typography-tokens {
   $family: if(
@@ -31,5 +32,11 @@
       $transform,
       $italic
     );
+  }
+}
+
+.ty-h1-d {
+  @include screen(sm) {
+    font-size: clamp(3.5rem, 2.765rem + 3.093vi, 4.25rem);
   }
 }

@@ -46,12 +46,16 @@ $leading-compact: calc(132 / 116);
 $leading-air: calc(28 / 20);
 $leading-normal: calc(24 / 16);
 
+$leading-custom: calc(80 / 60);
+
 $text-sm: 0.75rem;
 $text-base: 1rem;
 $text-lg: 1.25rem;
 $text-2xl: 2rem;
 $text-3xl: 3rem;
+$text-4xl: 4.25rem;
 $text-8xl: 7.25rem;
+$text-8xl-d: clamp(4.25rem, 0.821rem + 7.143vi, 7.25rem);
 
 $font-light: 300;
 $font-normal: 400;
@@ -64,6 +68,14 @@ $not-italic: normal;
 $typography-tokens: (
   h1: (
     size: $text-8xl,
+    weight: $font-light,
+    leading: $leading-compact,
+    tracking: $tracking-normal,
+    transform: uppercase,
+  ),
+
+  h1-d: (
+    size: $text-8xl-d,
     weight: $font-light,
     leading: $leading-compact,
     tracking: $tracking-normal,
