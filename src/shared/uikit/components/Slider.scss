@@ -1,0 +1,52 @@
+@use '@theme' as *;
+@use '@core' as *;
+
+.slider {
+  position: relative;
+  display: grid;
+  padding: 0;
+  block-size: 654px;
+  gap: rx(20);
+  grid-auto-columns: max-content;
+  grid-auto-flow: column;
+  inset-inline-end: 238px;
+
+  @include screen(md) {
+    inset-inline-end: 576px;
+  }
+
+  @include screen(sm) {
+    inset-inline-end: 770px;
+  }
+
+  &__item {
+    /* fdsf */
+  }
+
+  &__item.slide-1 {
+    align-self: start;
+  }
+
+  &__item.slide-2 {
+    align-self: center;
+  }
+
+  &__item.slide-3 {
+    align-self: center;
+  }
+
+  &__item.slide-4 {
+    align-self: start;
+  }
+  &__item.slide-5 {
+    align-self: end;
+  }
+
+  &__item.slide-6 {
+    align-self: center;
+  }
+
+  &__item.slide-7 {
+    align-self: start;
+  }
+}

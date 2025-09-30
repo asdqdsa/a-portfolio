@@ -1,0 +1,24 @@
+@use '@uikit' as *;
+@use '@core' as *;
+
+$porfolio-inline-size: clamp(21.25rem, 20.802rem + 1.887vi, 22.5rem);
+
+.portfolio {
+  @include flex(40);
+  position: relative;
+  overflow: clip;
+
+  margin-inline: -40px;
+
+  &__header {
+    @include flex(12);
+
+    margin-inline: 40px;
+    max-inline-size: $porfolio-inline-size;
+  }
+
+  &__content {
+    position: relative;
+    inline-size: 100%;
+  }
+}

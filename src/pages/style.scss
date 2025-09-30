@@ -2,6 +2,7 @@
 @forward './About';
 @forward './Pricing';
 @forward './Faq';
+@forward './Portfolio';
 
 @use '@uikit' as *;
 @use '@core' as *;
@@ -24,6 +25,16 @@
   background-color: $color-bg-secondary;
   color: $color-fg-secondary;
   @include selection($selection-bg-secondary, $selection-fg-secondary);
+}
+
+.portfolio__wrapper {
+  @include container($max-container-width: 1440, $left: 20, $right: 20);
+  /* overflow: clip; */
+  overflow: hidden;
+  padding: rx(60) rx(20);
+  background-color: $color-bg-primary;
+  color: $color-fg-primary;
+  @include selection($selection-bg, $selection-fg);
 }
 
 .pricing__wrapper {

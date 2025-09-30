@@ -56,6 +56,10 @@ html {
   font-family: $font-family-primary;
 }
 
+#app {
+  position: relative;
+}
+
 /* body * {
   outline: 1px solid lime !important;
 } */
