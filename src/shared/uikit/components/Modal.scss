@@ -1,0 +1,49 @@
+@use '@theme' as *;
+@use '@core' as *;
+
+.modal {
+  position: fixed;
+  display: none;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+
+  &__backdrop {
+    position: absolute;
+    background-color: $color-overlay;
+    inset: 0;
+  }
+
+  &__icon-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: rx(24);
+  }
+
+  &__icon {
+    block-size: rx(24);
+    /* inline-size: rx(24); */
+    @include hover {
+      color: $color-primary;
+      cursor: pointer;
+    }
+  }
+
+  &__content {
+    @include flex;
+    position: absolute;
+    justify-content: center;
+    padding: rx(60);
+    background-color: $color-sf-primary;
+    color: $color-on-sf-primary;
+    max-inline-size: rx(500);
+  }
+}
+
+.modal-active {
+  @include flex;
+}

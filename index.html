@@ -195,7 +195,9 @@
                   <p class="pricing__item-description ty-body-italic">
                     For short sessions and quick results
                   </p>
-                  <button class="btn ty-h4">Book now</button>
+                  <button data-id="book-now-btn" class="btn ty-h4">
+                    Book now
+                  </button>
                 </footer>
               </li>
               <li class="pricing__item card">
@@ -216,7 +218,9 @@
                   <p class="pricing__item-description ty-body-italic">
                     Perfect for couples, portraits, or lifestyle
                   </p>
-                  <button class="btn ty-h4">Book now</button>
+                  <button data-id="book-now-btn" class="btn ty-h4">
+                    Book now
+                  </button>
                 </footer>
               </li>
               <li class="pricing__item card">
@@ -240,7 +244,9 @@
                   <p class="pricing__item-description ty-body-italic">
                     For when you want to capture everything
                   </p>
-                  <button class="btn ty-h4">Book now</button>
+                  <button data-id="book-now-btn" class="btn ty-h4">
+                    Book now
+                  </button>
                 </footer>
               </li>
               <li class="pricing__item card">
@@ -264,7 +270,9 @@
                   <p class="pricing__item-description ty-body-italic">
                     Full-day or partial wedding coverage
                   </p>
-                  <button class="btn ty-h4">Book now</button>
+                  <button data-id="book-now-btn" class="btn ty-h4">
+                    Book now
+                  </button>
                 </footer>
               </li>
             </ul>
@@ -445,10 +453,12 @@
         <div class="signup__wrapper">
           <div class="signup">
             <h3 class="ty-h3">Like my portfolio? Sign up for a shoot!</h3>
-            <form class="signup__form">
+            <form class="signup__form signup__form-footer">
               <input class="input" type="text" placeholder="YOUR NAME" />
               <input class="input" type="tel" placeholder="+1" />
-              <button class="btn-md ty-ui" type="button">Book now</button>
+              <button data-id="book-now-btn" class="btn-md ty-ui" type="button">
+                Book now
+              </button>
             </form>
           </div>
         </div>
@@ -463,6 +473,38 @@
         </div>
       </footer>
     </div>
+
+    <div id="modal" class="modal">
+      <div id="modal-backdrop" class="modal__backdrop"></div>
+      <div class="modal__content">
+        <div class="modal__icon-wrapper">
+          <svg id="modal-close-btn" class="modal__icon" viewBox="0 0 24 24">
+            <use href="/close.svg#close-modal"></use>
+          </svg>
+        </div>
+        <div class="signup">
+          <h3 class="ty-h3">Like my portfolio? Sign up for a shoot!</h3>
+          <form class="signup__form signup__form-modal">
+            <input class="input ty-ui" type="text" placeholder="YOUR NAME" />
+            <input class="input ty-ui" type="tel" placeholder="+1" />
+            <button class="btn ty-ui" type="button">Book now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--FORM-->
+    <template id="form-template">
+      <div class="signup">
+        <h3 class="ty-h3">Like my portfolio? Sign up for a shoot!</h3>
+        <form class="signup__form">
+          <input class="input" type="text" placeholder="YOUR NAME" />
+          <input class="input" type="tel" placeholder="+1" />
+          <button class="btn-md ty-ui" type="button">Book now</button>
+        </form>
+      </div>
+    </template>
+
     <script type="module" src="/src/app/main.js"></script>
   </body>
 </html>

@@ -5,6 +5,12 @@
   --color-bg-primary: #222;
   --color-fg-primary: #fff;
 
+  --color-sf-primary: #fff;
+  --color-sf-secondary: #222;
+
+  --color-on-sf-primary: #222;
+  --color-on-sf-secondary: #fff;
+
   --color-bg-secondary: #fff;
   --color-fg-secondary: #222;
 
@@ -15,7 +21,7 @@
   --color-border-hover-primary: #ff3c3c;
   --color-border-secondary: #fff;
 
-  --color-overlay: #757575;
+  --color-overlay: #22222266;
   --color-outline: #1e1e1e;
   --color-outline-hover: #ff3c3c;
 
@@ -35,11 +41,6 @@
 
   --selection-bg-secondary: #ffffff33;
   --selection-fg-secondary: #222;
-
-  --color-sf-primary: #ecf3f8;
-  --color-sf-secondary: #ffffff66;
-  --color-sf-tertiary: #ffffff33;
-  --color-on-sf-primary: #181c29;
 }
 
 [data-theme='dark'] {
@@ -52,6 +53,12 @@
   --color-bg-secondary: #fff;
   --color-fg-secondary: #222;
 
+  --color-sf-primary: #fff;
+  --color-sf-secondary: #222;
+
+  --color-on-sf-primary: #222;
+  --color-on-sf-secondary: #fff;
+
   --color-secondary: #222;
   --color-on-secondary: #fff;
 
@@ -59,7 +66,7 @@
   --color-border-hover-primary: #ff3c3c;
   --color-border-secondary: #fff;
 
-  --color-overlay: #757575;
+  --color-overlay: #22222266;
   --color-outline: #1e1e1e;
   --color-outline-hover: #ff3c3c;
 
@@ -86,6 +93,12 @@
 
   --color-bg-secondary: #222;
   --color-fg-secondary: #fff;
+
+  --color-sf-primary: #222;
+  --color-sf-secondary: #fff;
+
+  --color-on-sf-primary: #fff;
+  --color-on-sf-secondary: #222;
 
   --color-secondary: #fff;
   --color-on-secondary: #222;
@@ -124,6 +137,12 @@
 
   --color-bg-secondary: #1e1e1e;
   --color-fg-secondary: #f5deb3;
+
+  --color-sf-primary: #1a1a1a;
+  --color-sf-secondary: #f5deb3;
+
+  --color-on-sf-primary: #121212;
+  --color-on-sf-secondary: #f5deb3;
 
   --color-secondary: #c0a060;
   --color-on-secondary: #0d0d0d;

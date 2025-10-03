@@ -7,10 +7,16 @@
 
   &__form {
     @include flex(8, row);
+  }
 
+  &__form-footer {
     @include screen(ml) {
       flex-direction: column;
       inline-size: 100%;
     }
+  }
+
+  &__form-modal {
+    flex-direction: column;
   }
 }

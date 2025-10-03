@@ -9,6 +9,12 @@ $color-fg-primary: var(--color-fg-primary);
 $color-bg-secondary: var(--color-bg-secondary);
 $color-fg-secondary: var(--color-fg-secondary);
 
+$color-sf-primary: var(--color-sf-primary);
+$color-sf-secondary: var(--color-sf-secondary);
+
+$color-on-sf-primary: var(--color-on-sf-primary);
+$color-on-sf-secondary: var(--color-on-sf-secondary);
+
 $color-border-primary: var(--color-border-primary);
 $color-border-hover-primary: var(--color-border-hover-primary);
 $color-border-secondary: var(--color-border-secondary);
@@ -27,10 +33,7 @@ $selection-fg: var(--selection-fg);
 $selection-bg-secondary: var(--selection-bg-secondary);
 $selection-fg-secondary: var(--selection-fg-secondary);
 
-$color-sf-primary: #ecf3f8;
-$color-sf-secondary: #ffffff66;
 $color-sf-tertiary: #ffffff33;
-$color-on-sf-primary: #181c29;
 
 $font-family-primary: 'Mulish', sans-serif;
 $font-family-secondary: 'Oswald', sans-serif;
