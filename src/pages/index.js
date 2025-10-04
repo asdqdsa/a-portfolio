@@ -1,10 +1,11 @@
-import '@/features/accordion';
+import '@/features/accordion/ui/accordion';
 import { closeModal, openModal } from '@/features/modal';
 import { nextThemeSwitcher } from '@/features/theme-switcher';
 import { STYLE_CONSTANTS, THEMES } from '@/pages/constants';
 
-/** @type {HTMLElement} */
+/** @type {HTMLElement} - Root Element */
 const root = document.querySelector('#root');
+
 const bookNowBtns = /** @type {NodeListOf<HTMLButtonElement>} */ (
   root.querySelectorAll('[data-id="book-now-btn"]')
 );
