@@ -54,17 +54,11 @@ function toggleAccordionItem({ mode, item, style }) {
   ({
     open: () => {
       content.style.maxHeight = toRem(content.scrollHeight);
-      icon.setAttribute(
-        'href',
-        './src/features/accordion/assets/minus.svg#minus'
-      );
+      icon.setAttribute('href', '/minus.svg#minus');
     },
     close: () => {
       content.style.maxHeight = '0';
-      icon.setAttribute(
-        'href',
-        './src/features/accordion/assets/plus.svg#plus'
-      );
+      icon.setAttribute('href', '/plus.svg#plus');
     },
   })[mode]();
 }
