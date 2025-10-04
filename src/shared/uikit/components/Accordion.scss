@@ -38,6 +38,10 @@
     padding-block-end: rx(20);
   }
 
+  .accordion__item-active {
+    padding-block-end: rx(20);
+  }
+
   @include hover {
     .accordion {
       &__header {

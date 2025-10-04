@@ -1,5 +1,5 @@
 @use '@uikit' as *;
-@use '@/pages/style';
+@use '@/pages/Home';
 
 *:not(input) {
   @include selection($selection-bg, $selection-fg);

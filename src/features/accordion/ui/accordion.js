@@ -7,19 +7,10 @@ import {
   updateAccordionState,
 } from '../model/state';
 
-/** @type {HTMLElement} - Root Element */
-const root = document.querySelector('#root');
-/** @type {HTMLElement} - Accordion Element */
-const accordion = root.querySelector('.accordion');
-
-/**
- * @param {HTMLElement} accordionEl
- */
-function initAccordionComponent(accordionEl) {
+export function initAccordionComponent({ node, accordionStyle }) {
   const { isFirstLoad, activeItemId } = loadAccordionState();
 
-  /** @type {NodeListOf<HTMLElement>} itemList */
-  const itemList = accordionEl.querySelectorAll('.accordion__item');
+  const itemList = node.querySelectorAll(accordionStyle.item);
   const initialKey = isFirstLoad ? INITIAL_FAQ_ITEM_KEY : activeItemId;
 
   itemList.forEach((item) => {
@@ -27,42 +18,38 @@ function initAccordionComponent(accordionEl) {
       updateAccordionState({
         activeItemId: item.dataset.key,
       });
-      toggleAccordionItem({ mode: 'open', item });
+      toggleAccordionItem({ mode: 'open', item, style: accordionStyle });
     }
   });
 
   itemList.forEach((item, _, list) => {
-    item.addEventListener('click', () => handleAccordionItemClick(item, list));
+    item.addEventListener('click', () =>
+      handleAccordionItemClick(item, list, accordionStyle)
+    );
   });
 }
 
-export const handleAccordionItemClick = (item, list) => {
-  const isActive = item.classList.contains('active');
+function handleAccordionItemClick(item, list, style) {
+  const isActive = item.classList.contains(style.active);
   if (isActive) {
-    toggleAccordionItem({ mode: 'close', item });
+    toggleAccordionItem({ mode: 'close', item, style });
     resetAccordionState();
   } else {
     list.forEach((item) => {
-      toggleAccordionItem({ mode: 'close', item });
+      toggleAccordionItem({ mode: 'close', item, style });
     });
-    toggleAccordionItem({ mode: 'open', item });
+
+    toggleAccordionItem({ mode: 'open', item, style });
     updateAccordionState({
       activeItemId: item.dataset.key,
     });
   }
-};
+}
 
-initAccordionComponent(accordion);
-
-/**
- * @param {{mode: 'open' | 'close', item: HTMLElement}} Params
- */
-function toggleAccordionItem({ mode, item }) {
-  item.classList.toggle('active', mode === 'open');
-  const icon = item.querySelector('.accordion__icon use');
-
-  /** @type {HTMLElement} content */
-  const content = item.querySelector('.accordion__content');
+function toggleAccordionItem({ mode, item, style }) {
+  item.classList.toggle(style.active, mode === 'open');
+  const icon = item.querySelector(style.icon);
+  const content = item.querySelector(style.content);
 
   ({
     open: () => {

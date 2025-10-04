@@ -9,3 +9,8 @@ export const closeModal = ({ node, style, root, onKeyDown }) => {
   root.classList.remove('overflow-hidden');
   document.removeEventListener('keydown', onKeyDown);
 };
+
+export const onEscape = ({ evt, node, style, config, onClose }) =>
+  evt.key === 'Escape' && node.classList.contains(style)
+    ? onClose(config)
+    : undefined;

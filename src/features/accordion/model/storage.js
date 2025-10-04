@@ -1,5 +1,5 @@
 import { LOCAL_STORAGE_KEY_ACCORDION } from '@/pages/constants';
-import { loadState, saveState } from '@/shared/utils';
+import { loadState, saveState } from '@/shared/utils/storage';
 
 /**
  * @typedef {Object} AccordionState

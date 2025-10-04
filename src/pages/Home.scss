@@ -1,9 +1,4 @@
-@forward './Hero';
-@forward './About';
-@forward './Pricing';
-@forward './Faq';
-@forward './Portfolio';
-
+@use './Sections';
 @use '@uikit' as *;
 @use '@core' as *;
 
