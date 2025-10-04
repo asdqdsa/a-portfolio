@@ -1,12 +1,14 @@
-import '@/features/theme-toggle';
 import '@/features/accordion';
-import '@/features/modal';
 import { closeModal, openModal } from '@/features/modal';
-import { STYLE_CONSTANTS } from '@/pages/constants';
+import { nextThemeSwitcher } from '@/features/theme-switcher';
+import { STYLE_CONSTANTS, THEMES } from '@/pages/constants';
 
-const bookNowBtns = document.querySelectorAll('[data-id="book-now-btn"]');
-const modal = document.querySelector('#modal');
+/** @type {HTMLElement} */
 const root = document.querySelector('#root');
+const bookNowBtns = /** @type {NodeListOf<HTMLButtonElement>} */ (
+  root.querySelectorAll('[data-id="book-now-btn"]')
+);
+const modal = /** @type {HTMLDivElement} */ (root.querySelector('#modal'));
 const closeBtn = modal.querySelector('#modal-close-btn');
 const backdrop = modal.querySelector('#modal-backdrop');
 
@@ -25,3 +27,10 @@ bookNowBtns.forEach((btn) =>
 );
 closeBtn.addEventListener('click', () => closeModal(modalConfig));
 backdrop.addEventListener('click', () => closeModal(modalConfig));
+
+/** @type {HTMLElement} themeBtn */
+const themeBtn = document.querySelector('#logo');
+
+themeBtn.addEventListener('click', () =>
+  nextThemeSwitcher({ root, themeList: THEMES })
+);
