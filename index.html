@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,18 +15,19 @@
           <img class="header__logo-img" src="logo.svg" alt="Logo" />
         </div>
         <nav class="nav ty-ui">
-          <ul class="list-nav">
+          <ul class="list-nav" id="list-nav">
             <li><a class="link" href="#about">ABOUT ME</a></li>
             <li><a class="link" href="#portfolio">PORTFOLIO</a></li>
             <li><a class="link" href="#price">PRICE</a></li>
             <li><a class="link" href="#faq">FAQ</a></li>
             <li><a class="link" href="#social">CONTACTS</a></li>
           </ul>
-          <button class="btn-nav">
+          <button class="btn-nav" id="mobile-menu-btn">
             <svg class="" aria-hidden="true">
               <use href="burger.svg#burger"></use>
             </svg>
           </button>
+          <div id="mobile-menu" class="mobile-menu"></div>
         </nav>
       </header>
       <main id="app" class="flex flex-col flex-1 justify-center items-center">

@@ -6,6 +6,15 @@ export const STYLE_CONSTANTS = {
     icon: '.accordion__icon use',
     content: '.accordion__content',
   },
+
+  MOBILE_MENU: {
+    cloneFrom: '#list-nav',
+    menuBtn: '#mobile-menu-btn',
+    active: 'mobile-menu-active',
+    list: 'list-mobile',
+    listNav: 'list-nav-mobile',
+    disableScroll: 'overflow-hidden',
+  },
 };
 
 export const THEMES = ['dark', 'light', 'gold'];

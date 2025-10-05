@@ -1,4 +1,5 @@
 import { initAccordionComponent } from '@/features/accordion';
+import { initMobileMenuComponent } from '@/features/mobile-menu';
 import { closeModal, onEscape, openModal } from '@/features/modal';
 import { nextThemeSwitcher } from '@/features/theme-switcher';
 import { STYLE_CONSTANTS, THEMES } from '@/pages/constants';
@@ -37,4 +38,12 @@ const accordion = root.querySelector('.accordion');
 initAccordionComponent({
   node: accordion,
   accordionStyle: STYLE_CONSTANTS.ACCORDION,
+});
+
+/** @type {HTMLElement} - Nav-list Element */
+const mobileMenu = root.querySelector('#mobile-menu');
+initMobileMenuComponent({
+  root,
+  node: mobileMenu,
+  styles: STYLE_CONSTANTS.MOBILE_MENU,
 });

@@ -7,6 +7,7 @@
 
 .btn-nav {
   @include selectable($color-primary);
+  z-index: 1000;
   display: none;
   block-size: rx(60);
   inline-size: rx(60);
