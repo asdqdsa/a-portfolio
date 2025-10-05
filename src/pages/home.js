@@ -24,6 +24,10 @@ bookNowBtns.forEach((btn) =>
 const closeBtn = modal.querySelector('#modal-close-btn');
 closeBtn.addEventListener('click', () => closeModal(modalConfig));
 
+document.addEventListener('keydown', (evt) =>
+  onEscape({ evt, ...modalConfig, config: modalConfig, onClose: closeModal })
+);
+
 const backdrop = modal.querySelector('#modal-backdrop');
 backdrop.addEventListener('click', () => closeModal(modalConfig));
 
