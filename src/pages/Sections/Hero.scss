@@ -101,14 +101,14 @@ $hero-feature-size-x-rt: clamp(12.5rem, 0.192rem + 19.231vi, 17.5rem);
       inline-size: $hero-feature-size-x-rt;
 
       @include screen(lg) {
-        inline-size: clamp(12.5rem, -10rem + 46.875vi, 20rem);
+        inline-size: clamp(11.5rem, -10rem + 46.875vi, 20rem);
       }
       @include screen(md) {
         inline-size: rx(220);
       }
 
       @include screen(ml) {
-        inline-size: rx(200);
+        inline-size: rx(181);
       }
 
       @include screen(sm) {
