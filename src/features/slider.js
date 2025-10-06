@@ -12,7 +12,7 @@ export function initSliderComponent({ node, selectors }) {
   let timer;
 
   function handleScrollDesktop({ mode, step, delay }) {
-    const direction = mode === 'left' ? 1 : -1;
+    const direction = mode === 'left' ? -1 : 1;
 
     clearInterval(timer);
     timer = setInterval(() => {
