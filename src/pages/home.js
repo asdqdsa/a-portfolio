@@ -1,42 +1,18 @@
 import { initAccordionComponent } from '@/features/accordion';
 import { initMobileMenuComponent } from '@/features/mobile-menu';
-import { closeModal, onEscape, openModal } from '@/features/modal';
+import { initModalComponent, onEscape } from '@/features/modal';
 import { initSliderComponent } from '@/features/slider';
-import { nextThemeSwitcher } from '@/features/theme-switcher';
-import { SELECTORS, THEMES } from '@/pages/constants';
+import { initThemeSwitcher } from '@/features/theme-switcher';
+import { SELECTORS } from '@/pages/selectors';
+import { THEMES } from '@/shared/constants';
 
 /** @type {HTMLElement} - Root Element */
 const root = document.querySelector('#root');
 
-/** @type {HTMLElement} - Modal Element */
-const modal = root.querySelector('#modal');
-const modalConfig = {
-  node: modal,
-  style: SELECTORS.MODAL_ACTIVE,
-  root,
-  onKeyDown: onEscape,
-};
-
-const bookNowBtns = root.querySelectorAll('[data-id="book-now-btn"]');
-bookNowBtns.forEach((btn) =>
-  btn.addEventListener('click', () => openModal(modalConfig))
-);
-
-const closeBtn = modal.querySelector('#modal-close-btn');
-closeBtn.addEventListener('click', () => closeModal(modalConfig));
-
-document.addEventListener('keydown', (evt) =>
-  onEscape({ evt, ...modalConfig, config: modalConfig, onClose: closeModal })
-);
-
-const backdrop = modal.querySelector('#modal-backdrop');
-backdrop.addEventListener('click', () => closeModal(modalConfig));
-
-/** @type {HTMLElement} - Theme Button Element */
-const themeBtn = document.querySelector('#logo');
-themeBtn.addEventListener('click', () =>
-  nextThemeSwitcher({ root, themeList: THEMES })
-);
+/** @type {HTMLElement} - Theme Switcher Element */
+const themeSwitchBtn = document.querySelector('#logo');
+themeSwitchBtn &&
+  initThemeSwitcher({ root, node: themeSwitchBtn, themeList: THEMES });
 
 /** @type {HTMLElement} - Accordion Element */
 const accordion = root.querySelector('.accordion');
@@ -61,4 +37,19 @@ slider &&
   initSliderComponent({
     node: slider,
     selectors: SELECTORS.SLIDER,
+  });
+
+/** @type {HTMLElement} - Modal Element */
+const modal = root.querySelector('#modal');
+const modalConfig = {
+  node: modal,
+  style: SELECTORS.MODAL_ACTIVE,
+  root,
+  onKeyDown: onEscape,
+};
+modal &&
+  initModalComponent({
+    root,
+    node: modal,
+    config: modalConfig,
   });

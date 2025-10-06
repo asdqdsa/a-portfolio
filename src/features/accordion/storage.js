@@ -1,4 +1,4 @@
-import { LOCAL_STORAGE_KEY_ACCORDION } from '@/pages/constants';
+import { LOCAL_STORAGE_KEY_ACCORDION } from '@/shared/constants';
 import { loadState, saveState } from '@/shared/utils/storage';
 
 /**

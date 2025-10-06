@@ -1,5 +1,5 @@
 @use '@uikit' as *;
-@use '@/pages/Home';
+@use '@/pages/home';
 
 *:not(input) {
   @include selection($selection-bg, $selection-fg);
@@ -45,7 +45,6 @@ a {
 }
 
 html {
-  /* height: 100%; */
   margin: 0;
   scroll-behavior: smooth;
   /* scrollbar-gutter: stable; */
