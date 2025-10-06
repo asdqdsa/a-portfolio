@@ -7,9 +7,18 @@
   cursor: pointer;
   transition: color 0.3s ease;
 
+  & a {
+    display: flex;
+    align-items: baseline;
+    gap: rx(5);
+  }
+
   &__icon {
-    width: rx(24);
-    height: rx(24);
+    display: flex;
+    width: rx(20);
+    height: rx(14);
+    align-items: center;
+    justify-content: center;
     fill: $color-fg-secondary;
     text-align: center;
     transition: fill 0.2s ease;
