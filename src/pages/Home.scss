@@ -23,10 +23,8 @@
 }
 
 .portfolio__wrapper {
-  @include container($max-container-width: 1440, $left: 20, $right: 20);
-  /* overflow: clip; */
+  @include container($max-container-width: 1440, $top: 60, $bot: 60);
   overflow: hidden;
-  padding: rx(60) rx(20);
   background-color: $color-bg-primary;
   color: $color-fg-primary;
   @include selection($selection-bg, $selection-fg);

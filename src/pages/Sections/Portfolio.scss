@@ -4,21 +4,18 @@
 $porfolio-inline-size: clamp(21.25rem, 20.802rem + 1.887vi, 22.5rem);
 
 .portfolio {
-  @include flex(40);
-  position: relative;
-  overflow: clip;
-
-  margin-inline: -40px;
+  display: grid;
+  grid-template-columns: rx(20) [start] 1fr [end] rx(20);
+  row-gap: rx(40);
 
   &__header {
     @include flex(12);
 
-    margin-inline: 40px;
+    grid-column: start / end;
     max-inline-size: $porfolio-inline-size;
   }
 
   &__content {
-    position: relative;
-    inline-size: 100%;
+    grid-column: 1 / -1;
   }
 }

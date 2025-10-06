@@ -3,24 +3,48 @@
 
 .slider {
   position: relative;
-  display: grid;
-  padding: 0;
-  block-size: 654px;
-  gap: rx(20);
-  grid-auto-columns: max-content;
-  grid-auto-flow: column;
-  inset-inline-end: 238px;
 
-  @include screen(md) {
-    inset-inline-end: 576px;
+  &__controls {
+    position: absolute;
+    z-index: 10;
+    block-size: 100%;
+    cursor: pointer;
+    inline-size: 30%;
+    inset-block-start: 0;
+
+    &_lt {
+      inset-inline-start: 0;
+    }
+
+    &_rt {
+      inset-inline-end: 0;
+    }
   }
 
-  @include screen(sm) {
-    inset-inline-end: 770px;
+  &__frame {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    block-size: 654px;
+    gap: rx(20);
+    grid-auto-columns: max-content;
+    grid-auto-flow: column;
+    /* inset-inline-end: 238px; */
+
+    @include screen(md) {
+      /* inset-inline-end: 576px; */
+    }
+
+    @include screen(sm) {
+      /* inset-inline-end: 770px; */
+    }
   }
 
-  &__item {
-    /* fdsf */
+  &__item img {
+    display: block;
+    block-size: auto;
+    inline-size: 100%;
+    object-fit: cover;
   }
 
   &__item.slide-1 {
@@ -38,6 +62,7 @@
   &__item.slide-4 {
     align-self: start;
   }
+
   &__item.slide-5 {
     align-self: end;
   }
