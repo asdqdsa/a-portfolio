@@ -13,22 +13,40 @@
     inset-block-start: 0;
 
     &_lt {
+      /* background: rgba(0, 0, 255, 0.1); */
       inset-inline-start: 0;
+
+      @include hover {
+        /* background: rgba(0, 0, 255, 0.2); */
+      }
     }
 
     &_rt {
+      /* background: rgba(0, 0, 255, 0.1); */
       inset-inline-end: 0;
+
+      @include hover {
+        /* background: rgba(0, 0, 255, 0.2); */
+      }
+    }
+
+    @include touch {
+      background: transparent;
+      pointer-events: none;
     }
   }
 
   &__frame {
     display: grid;
-    align-items: center;
-    justify-content: center;
     block-size: 654px;
     gap: rx(20);
     grid-auto-columns: max-content;
     grid-auto-flow: column;
+    overflow-x: hidden;
+    /* background: rgba(0, 255, 0, 0.1); */
+    padding-inline: rx(20);
+    /* scroll-behavior: smooth; */
+    will-change: scroll-position;
     /* inset-inline-end: 238px; */
 
     @include screen(md) {

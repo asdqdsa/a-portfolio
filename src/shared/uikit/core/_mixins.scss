@@ -10,6 +10,12 @@
   }
 }
 
+@mixin touch() {
+  @media (hover: none) and (pointer: coarse) {
+    @content;
+  }
+}
+
 @mixin icon($size) {
   display: inline-block;
   width: $size;

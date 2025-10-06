@@ -1,8 +1,9 @@
 import { initAccordionComponent } from '@/features/accordion';
 import { initMobileMenuComponent } from '@/features/mobile-menu';
 import { closeModal, onEscape, openModal } from '@/features/modal';
+import { initSliderComponent } from '@/features/slider';
 import { nextThemeSwitcher } from '@/features/theme-switcher';
-import { STYLE_CONSTANTS, THEMES } from '@/pages/constants';
+import { SELECTORS, THEMES } from '@/pages/constants';
 
 /** @type {HTMLElement} - Root Element */
 const root = document.querySelector('#root');
@@ -11,7 +12,7 @@ const root = document.querySelector('#root');
 const modal = root.querySelector('#modal');
 const modalConfig = {
   node: modal,
-  style: STYLE_CONSTANTS.MODAL_ACTIVE,
+  style: SELECTORS.MODAL_ACTIVE,
   root,
   onKeyDown: onEscape,
 };
@@ -39,15 +40,25 @@ themeBtn.addEventListener('click', () =>
 
 /** @type {HTMLElement} - Accordion Element */
 const accordion = root.querySelector('.accordion');
-initAccordionComponent({
-  node: accordion,
-  accordionStyle: STYLE_CONSTANTS.ACCORDION,
-});
+accordion &&
+  initAccordionComponent({
+    node: accordion,
+    accordionStyle: SELECTORS.ACCORDION,
+  });
 
 /** @type {HTMLElement} - Nav-list Element */
 const mobileMenu = root.querySelector('#mobile-menu');
-initMobileMenuComponent({
-  root,
-  node: mobileMenu,
-  styles: STYLE_CONSTANTS.MOBILE_MENU,
-});
+mobileMenu &&
+  initMobileMenuComponent({
+    root,
+    node: mobileMenu,
+    styles: SELECTORS.MOBILE_MENU,
+  });
+
+/** @type {HTMLElement} Slider Element */
+const slider = root.querySelector('.slider');
+slider &&
+  initSliderComponent({
+    node: slider,
+    selectors: SELECTORS.SLIDER,
+  });
