@@ -42,7 +42,7 @@
     "vite-plugin-stylelint": "^6.0.2"
   },
   "lint-staged": {
-    "*.{js,css,scss,html,json,md}": [
+    "*.{js,css,scss,json,md}": [
       "prettier --write"
     ],
     "*.js": [
