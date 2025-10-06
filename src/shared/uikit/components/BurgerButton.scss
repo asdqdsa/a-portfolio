@@ -1,0 +1,51 @@
+@use '@theme' as *;
+@use '@core' as *;
+
+.burger-btn__line {
+  height: rx(2);
+  background-color: $color-sf-primary;
+  transition: transform 0.3s ease-in-out;
+
+  &-top {
+    width: rx(12);
+  }
+
+  &-bot {
+    width: rx(20);
+  }
+}
+
+.burger-btn {
+  display: flex;
+
+  width: rx(60);
+  height: rx(60);
+  align-items: center;
+  justify-content: center;
+
+  @include hover {
+    .burger-btn__line {
+      background-color: $color-primary;
+    }
+  }
+
+  &.burger-btn-active {
+    .burger-btn__line-top {
+      width: rx(20);
+      transform: rotate(225deg) translateX(-27%);
+    }
+
+    .burger-btn__line-bot {
+      width: rx(20);
+      transform: rotate(-225deg) translateX(-27%);
+    }
+  }
+}
+
+.burger-btn__container {
+  @include flex(6);
+  align-items: end;
+  justify-content: center;
+  padding: rx(10);
+  block-size: 100%;
+}

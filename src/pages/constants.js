@@ -15,6 +15,8 @@ export const SELECTORS = {
     list: 'list-mobile',
     listNav: 'list-nav-mobile',
     disableScroll: 'overflow-hidden',
+    burgerBtn: '.burger-btn',
+    burgerBtnActive: 'burger-btn-active',
   },
 
   SLIDER: {
