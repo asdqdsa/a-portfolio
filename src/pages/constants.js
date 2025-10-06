@@ -5,6 +5,7 @@ export const STYLE_CONSTANTS = {
     active: 'accordion__item-active',
     icon: '.accordion__icon use',
     content: '.accordion__content',
+    header: '.accordion__header',
   },
 
   MOBILE_MENU: {

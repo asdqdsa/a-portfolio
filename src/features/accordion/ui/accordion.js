@@ -23,7 +23,8 @@ export function initAccordionComponent({ node, accordionStyle }) {
   });
 
   itemList.forEach((item, _, list) => {
-    item.addEventListener('click', () =>
+    const itemHeader = item.querySelector(accordionStyle.header);
+    itemHeader.addEventListener('click', () =>
       handleAccordionItemClick(item, list, accordionStyle)
     );
   });
