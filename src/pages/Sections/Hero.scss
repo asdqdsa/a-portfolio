@@ -153,6 +153,10 @@ $hero-feature-size-x-rt: clamp(12.5rem, 0.192rem + 19.231vi, 17.5rem);
 .hero__scroll {
   padding-block-start: rx(6);
 
+  @include screen(md) {
+    padding-inline-start: rx(20);
+  }
+
   @include screen(sm) {
     display: none;
     padding-block-start: rx(0);
