@@ -29,18 +29,18 @@ export function initSliderComponent({ node, selectors }) {
     frame.scrollTo({ left: center, behavior: 'smooth' });
   });
 
-  let dragStart = 0;
-  let scrollStart = 0;
+  // let dragStart = 0;
+  // let scrollStart = 0;
 
-  frame.addEventListener('touchstart', (e) => {
-    dragStart = e.touches[0].clientX;
-    scrollStart = frame.scrollLeft;
-  });
+  // frame.addEventListener('touchstart', (e) => {
+  //   dragStart = e.touches[0].clientX;
+  //   scrollStart = frame.scrollLeft;
+  // });
 
-  frame.addEventListener('touchmove', (e) => {
-    const delta = e.touches[0].clientX - dragStart;
-    frame.scrollLeft = scrollStart - delta;
-  });
+  // frame.addEventListener('touchmove', (e) => {
+  //   const delta = e.touches[0].clientX - dragStart;
+  //   frame.scrollLeft = scrollStart - delta;
+  // });
 
   leftControl.addEventListener('mouseenter', () =>
     handleScrollDesktop({ mode: 'left', step: STEP, delay: DELAY })
