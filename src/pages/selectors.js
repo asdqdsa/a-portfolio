@@ -1,5 +1,11 @@
 export const SELECTORS = {
-  MODAL_ACTIVE: 'modal-active',
+  MODAL: {
+    active: 'modal-active',
+    overflowHidden: 'overflow-hidden',
+    target: '[data-id="book-now-btn"]',
+    closeBtn: '#modal-close-btn',
+    backdrop: '#modal-backdrop',
+  },
   ACCORDION: {
     item: '.accordion__item',
     active: 'accordion__item-active',

@@ -28,7 +28,8 @@ export function initMobileMenuComponent({ root, node, styles: selectors }) {
   });
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth > MOBILE_SCREEN_WIDTH) {
+    const mode = node.classList.contains(selectors.active) ? 'close' : 'open';
+    if (window.innerWidth > MOBILE_SCREEN_WIDTH && mode === 'close') {
       toggleMobileMenu({ mode: 'close', root, node, styles: selectors });
     }
   });

@@ -477,24 +477,27 @@
     </footer>
   </div>
 
-  <div id="modal" class="modal">
-    <div id="modal-backdrop" class="modal__backdrop"></div>
-    <div class="modal__content">
-      <div class="modal__icon-wrapper">
-        <svg id="modal-close-btn" class="modal__icon" viewBox="0 0 24 24">
-          <use href="/close.svg#close-modal"></use>
-        </svg>
-      </div>
-      <div class="signup modal__signup">
-        <h3 class="ty-h3">Like my portfolio? Sign up for a shoot!</h3>
-        <form class="signup__form modal__signup-form">
-          <input class="input ty-ui" type="text" placeholder="YOUR NAME" />
-          <input class="input ty-ui" type="tel" placeholder="+1" />
-          <button class="btn ty-ui" type="button">Book now</button>
-        </form>
+  <!--MODAL-->
+  <template id="modal-template">
+    <div id="modal" class="modal">
+      <div id="modal-backdrop" class="modal__backdrop"></div>
+      <div class="modal__content">
+        <div class="modal__icon-wrapper">
+          <svg id="modal-close-btn" class="modal__icon" viewBox="0 0 24 24">
+            <use href="/close.svg#close-modal"></use>
+          </svg>
+        </div>
+        <div class="signup modal__signup">
+          <h3 class="ty-h3 modal__signup-header">Like my portfolio? Sign up for a shoot!</h3>
+          <form class="signup__form modal__signup-form">
+            <input class="input modal__signup-input ty-ui" type="text" placeholder="YOUR NAME" />
+            <input class="input modal__signup-input ty-ui" type="tel" placeholder="+1" />
+            <button class="btn ty-ui" type="button">Book now</button>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
+  </template>
 
   <!--FORM-->
   <template id="form-template">

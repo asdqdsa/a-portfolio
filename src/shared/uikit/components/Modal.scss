@@ -4,7 +4,6 @@
 .modal {
   position: fixed;
   display: none;
-  /* display: flex; */
   align-items: center;
   justify-content: center;
   inset: 0;
@@ -12,11 +11,20 @@
   transition: opacity 0.3s ease-in-out;
 
   &__signup {
+    align-items: unset;
     gap: rx(12);
+  }
+
+  &__signup-header {
+    text-align: center;
   }
 
   &__signup-form {
     flex-direction: column;
+  }
+
+  &__signup-input {
+    inline-size: 100%;
   }
 
   &__backdrop {
@@ -34,7 +42,6 @@
 
   &__icon {
     block-size: rx(24);
-    /* inline-size: rx(24); */
     @include hover {
       color: $color-primary;
       cursor: pointer;
@@ -45,10 +52,12 @@
     @include flex;
     position: absolute;
     justify-content: center;
-    padding: rx(60);
     background-color: $color-sf-primary;
     color: $color-on-sf-primary;
+    margin-inline: rx(20);
     max-inline-size: rx(500);
+    padding-block: rx(60);
+    padding-inline: clamp(1.25rem, 0.354rem + 3.774vi, 3.75rem);
   }
 }
 

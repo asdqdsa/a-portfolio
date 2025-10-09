@@ -1,38 +1,37 @@
+import { setKeyHandler } from '@/shared/utils/key-handler';
 import { getScrollbarWidth, toRem } from '@/shared/utils/lib';
 
-export const openModal = ({ node, style, root, onKeyDown }) => {
-  const scrollBarWidth = getScrollbarWidth();
-  node.classList.add(style);
-  root.style.paddingInlineEnd = toRem(scrollBarWidth);
-  root.classList.add('overflow-hidden');
-  document.addEventListener('keydown', onKeyDown);
-};
+export function initModalComponent({ root, node, style }) {
+  const closeModal = ({ node, style, root }) => {
+    node.classList.remove(style.active);
+    root.style.paddingInlineEnd = '';
+    root.classList.remove(style.overflowHidden);
+    esc.unmount();
+  };
 
-export const closeModal = ({ node, style, root, onKeyDown }) => {
-  node.classList.remove(style);
-  root.style.paddingInlineEnd = '';
-  root.classList.remove('overflow-hidden');
-  document.removeEventListener('keydown', onKeyDown);
-};
+  const openModal = ({ node, style, root }) => {
+    const scrollBarWidth = getScrollbarWidth();
+    node.classList.add(style.active);
+    root.style.paddingInlineEnd = toRem(scrollBarWidth);
+    root.classList.add(style.overflowHidden);
+    esc.mount();
+  };
 
-export const onEscape = ({ evt, node, style, config, onClose }) =>
-  evt.key === 'Escape' && node.classList.contains(style)
-    ? onClose(config)
-    : undefined;
+  const esc = setKeyHandler({
+    key: 'Escape',
+    type: 'keydown',
+    cb: () => closeModal({ node, style, root }),
+  });
 
-export function initModalComponent({ root, node, config }) {
-  const bookNowBtns = root.querySelectorAll('[data-id="book-now-btn"]');
-  bookNowBtns.forEach((btn) =>
-    btn.addEventListener('click', () => openModal(config))
-  );
+  root
+    .querySelectorAll(style.target)
+    .forEach((btn) =>
+      btn.addEventListener('click', () => openModal({ node, style, root }))
+    );
 
-  const closeBtn = node.querySelector('#modal-close-btn');
-  closeBtn.addEventListener('click', () => closeModal(config));
+  const closeBtn = node.querySelector(style.closeBtn);
+  closeBtn.addEventListener('click', () => closeModal({ node, style, root }));
 
-  document.addEventListener('keydown', (evt) =>
-    onEscape({ evt, ...config, config: config, onClose: closeModal })
-  );
-
-  const backdrop = node.querySelector('#modal-backdrop');
-  backdrop.addEventListener('click', () => closeModal(config));
+  const backdrop = node.querySelector(style.backdrop);
+  backdrop.addEventListener('click', () => closeModal({ node, style, root }));
 }

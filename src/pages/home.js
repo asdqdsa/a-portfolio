@@ -1,6 +1,6 @@
 import { initAccordionComponent } from '@/features/accordion';
 import { initMobileMenuComponent } from '@/features/mobile-menu';
-import { initModalComponent, onEscape } from '@/features/modal';
+import { initModalComponent } from '@/features/modal';
 import { initSliderComponent } from '@/features/slider';
 import { initThemeSwitcher } from '@/features/theme-switcher';
 import { SELECTORS } from '@/pages/selectors';
@@ -39,17 +39,13 @@ slider &&
     selectors: SELECTORS.SLIDER,
   });
 
-/** @type {HTMLElement} - Modal Element */
-const modal = root.querySelector('#modal');
-const modalConfig = {
-  node: modal,
-  style: SELECTORS.MODAL_ACTIVE,
-  root,
-  onKeyDown: onEscape,
-};
+/** @type {HTMLTemplateElement} - Modal Template Element */
+const modalTemplate = document.querySelector('#modal-template');
+const modal = modalTemplate?.content.firstElementChild.cloneNode(true);
 modal &&
+  root.appendChild(modal) &&
   initModalComponent({
     root,
     node: modal,
-    config: modalConfig,
+    style: SELECTORS.MODAL,
   });
