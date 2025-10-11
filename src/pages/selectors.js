@@ -1,4 +1,16 @@
 export const SELECTORS = {
+  CARD: {
+    container: '.pricing__list',
+    title: '.card__title',
+    list: '.card__list',
+    item: '.card__list-item',
+    content: '.card__content',
+    description: '.card__description',
+    footer: '.card__footer',
+    price: '.card__price',
+    confirmBtn: '.card__confirm-btn',
+  },
+
   MODAL: {
     active: 'modal-active',
     overflowHidden: 'overflow-hidden',
@@ -6,6 +18,7 @@ export const SELECTORS = {
     closeBtn: '#modal-close-btn',
     backdrop: '#modal-backdrop',
   },
+
   ACCORDION: {
     item: '.accordion__item',
     active: 'accordion__item-active',

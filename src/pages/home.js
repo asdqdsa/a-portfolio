@@ -1,4 +1,5 @@
 import { initAccordionComponent } from '@/features/accordion';
+import { initCardsComponent } from '@/features/card';
 import { initMobileMenuComponent } from '@/features/mobile-menu';
 import { initModalComponent } from '@/features/modal';
 import { initSliderComponent } from '@/features/slider';
@@ -38,6 +39,11 @@ slider &&
     node: slider,
     selectors: SELECTORS.SLIDER,
   });
+
+/** @type {HTMLTemplateElement} - Card Template Element */
+const cardTemplate = document.querySelector('#card-template');
+const card = cardTemplate?.content.firstElementChild;
+card && initCardsComponent({ root, node: card, selectors: SELECTORS.CARD });
 
 /** @type {HTMLTemplateElement} - Modal Template Element */
 const modalTemplate = document.querySelector('#modal-template');
