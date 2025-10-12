@@ -20,11 +20,14 @@ export const SELECTORS = {
   },
 
   ACCORDION: {
+    container: '.faq__content',
     item: '.accordion__item',
     active: 'accordion__item-active',
     icon: '.accordion__icon use',
     content: '.accordion__content',
     header: '.accordion__header',
+    title: '.accordion__title',
+    description: '.accordion__description',
   },
 
   MOBILE_MENU: {

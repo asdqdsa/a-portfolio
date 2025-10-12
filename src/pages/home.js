@@ -15,14 +15,6 @@ const themeSwitchBtn = document.querySelector('#logo');
 themeSwitchBtn &&
   initThemeSwitcher({ root, node: themeSwitchBtn, themeList: THEMES });
 
-/** @type {HTMLElement} - Accordion Element */
-const accordion = root.querySelector('.accordion');
-accordion &&
-  initAccordionComponent({
-    node: accordion,
-    accordionStyle: SELECTORS.ACCORDION,
-  });
-
 /** @type {HTMLElement} - Nav-list Element */
 const mobileMenu = root.querySelector('#mobile-menu');
 mobileMenu &&
@@ -38,6 +30,17 @@ slider &&
   initSliderComponent({
     node: slider,
     selectors: SELECTORS.SLIDER,
+  });
+
+/** @type {HTMLTemplateElement} - Accordion Template Element */
+const accordionTemplate = document.querySelector('#accordion-template');
+const accordion = accordionTemplate?.content.firstElementChild;
+
+accordion &&
+  initAccordionComponent({
+    root,
+    node: accordion,
+    selectors: SELECTORS.ACCORDION,
   });
 
 /** @type {HTMLTemplateElement} - Card Template Element */
