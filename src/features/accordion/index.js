@@ -1,5 +1,4 @@
 import { toRem } from '@/shared/utils/lib';
-import { INITIAL_FAQ_ITEM_KEY } from '@/shared/constants';
 
 import {
   loadAccordionState,
@@ -7,6 +6,7 @@ import {
   updateAccordionState,
 } from './state';
 import { accordionData } from './data';
+import { INITIAL_FAQ_ITEM_KEY } from './constants';
 
 export function initAccordionComponent({ root, node, selectors }) {
   const { isFirstLoad, activeItemId } = loadAccordionState();

@@ -1,6 +1,6 @@
-import { LOCAL_STORAGE_KEY_THEMES } from '@/shared/constants';
 import { loadState, saveState } from '@/shared/utils/storage';
 
+import { LOCAL_STORAGE_KEY_THEMES } from './constants';
 /**
  * @typedef {Object} ThemeState
  * @property {'dark' | 'light' | 'gold' | null} activeTheme

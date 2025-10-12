@@ -1,6 +1,6 @@
-import { LOCAL_STORAGE_KEY_ACCORDION } from '@/shared/constants';
 import { loadState, saveState } from '@/shared/utils/storage';
 
+import { LOCAL_STORAGE_KEY_ACCORDION } from './constants';
 /**
  * @typedef {Object} AccordionState
  * @property {string | null} activeItemId

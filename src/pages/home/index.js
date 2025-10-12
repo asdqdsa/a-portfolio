@@ -1,11 +1,12 @@
 import { initAccordionComponent } from '@/features/accordion';
-import { initCardsComponent } from '@/features/card';
+import { initCardsComponent } from '@/features/cards';
 import { initMobileMenuComponent } from '@/features/mobile-menu';
 import { initModalComponent } from '@/features/modal';
 import { initSliderComponent } from '@/features/slider';
 import { initThemeSwitcher } from '@/features/theme-switcher';
-import { SELECTORS } from '@/pages/selectors';
-import { THEMES } from '@/shared/constants';
+import { THEMES } from '@/features/theme-switcher/constants';
+
+import { SELECTORS } from './selectors';
 
 /** @type {HTMLElement} - Root Element */
 const root = document.querySelector('#root');
@@ -56,5 +57,5 @@ modal &&
   initModalComponent({
     root,
     node: modal,
-    style: SELECTORS.MODAL,
+    selectors: SELECTORS.MODAL,
   });

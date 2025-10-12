@@ -1,4 +1,4 @@
-import { BASE_FONT_SIZE } from '../constants';
+import { BASE_FONT_SIZE } from './constants';
 
 export const toRem = (px) => `${px / BASE_FONT_SIZE}rem`;
 

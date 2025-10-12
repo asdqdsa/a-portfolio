@@ -1,5 +1,6 @@
+@use 'modern-normalize';
+@use '@/pages/home/style';
 @use '@uikit' as *;
-@use '@/pages/home';
 
 *:not(input) {
   @include selection($selection-bg, $selection-fg);

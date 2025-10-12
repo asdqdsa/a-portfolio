@@ -1,9 +1,9 @@
 export const setKeyHandler = ({
   key = 'Escape',
   type = 'keydown',
-  cb = () => {},
+  onKey = () => {},
 }) => {
-  const handler = (evt) => evt.key === key && cb();
+  const handler = (evt) => evt.key === key && onKey();
 
   return {
     mount: () => document.addEventListener(type, handler),

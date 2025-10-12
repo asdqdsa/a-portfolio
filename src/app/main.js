@@ -1,2 +1,2 @@
-import '@/app/global.scss';
-import '@/app/layout';
+import '@/app/style.scss';
+import '@/pages/home';
