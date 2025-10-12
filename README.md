@@ -20,7 +20,7 @@ pnpm dev
 
 ## :coffee: TODO
 
-- [ ] **Refactor static markup w/ templates**
+- [x] **Refactor static markup w/ templates**
 - [ ] **New theme dropdown**
 - [ ] **OG & META tags**
 - [ ] **Page loader**
